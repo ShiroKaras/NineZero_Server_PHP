@@ -1,0 +1,103 @@
+.slogan_desc {
+    /*width: 40rem;*/
+    width: 89%;
+    margin: 1.72rem auto;
+}
+.text {
+    color: #d40e88;
+    font-weight: 500;
+    opacity: 1;
+}
+.text em {
+    color: #24ddb2;
+    font-style: normal;
+}
+.icon:before {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: -4px;
+}
+.heart:before {
+    content: url("../images/custom/icon-heart.png");
+}
+.riddle:before {
+    content: url("../images/custom/icon-riddle.png");
+}
+.time:before {
+    content: url("../images/custom/icon-time.png");
+}
+.culture:before {
+    content: url("../images/custom/icon-culture.png");
+}
+.intro.content_anim6.animated.fadeInUp {
+    padding-bottom: 0;
+}
+h3.icon {
+    margin-top: 0;
+}
+#features_video {
+    padding: 0;
+}
+.subsection {
+    background-color: #000;
+}
+#reviews {
+    background-color: #000;
+    background-image: none;
+}
+/*#reviews .intro {
+    width: 80%;
+    float: right;
+}*/
+/*#reviews .container {
+    margin: 0;
+}*/
+
+.subsection {
+    border-bottom: none;
+}
+
+.menu_bar,
+.cbp-spmenu {
+    background-color: #101010;
+}
+.cta_button_area a,
+.slogan,
+h3,
+h6 {
+    opacity: 1;
+}
+
+.home_content {
+    margin-top: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+    z-index: 1;
+}
+#video_modal_box video {
+    position: static;
+    width: 100%;
+}
+.social_icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+.weibo_icon {
+    background: url("../images/custom/icon-weibo.png") 50% 20%/cover no-repeat;
+}
+.wechat_icon {
+    background: url("../images/custom/icon-wechat.png") 50% 20%/cover no-repeat;
+}
+
+@media (max-width: 767px){
+    #features .row,
+    #contact .row,
+    #reviews .row {
+        text-align: center;
+    }
+}
