@@ -1,278 +1,3 @@
-shutdown -h now
-ls
-sudo apt-get install php5 php5-dev php5-myslqnd
-sudo apt-get install php5 php5-dev php5-mysqlnd
-sudo apt-get update
-sudo apt-get install php5 php5-dev php5-mysqlnd
-sudo apt-get autoremove apache2
-php -v
-sudo apt-get install mysql-server
-sudo apt-get install php5-fpm nginx
-sudo apt-get install git
-sudo apt-get install redis
-sudo apt-get install redis-server
-redis-cli
-mysql -u root -p
-sudo pecl install swoole
-sudo apt-get install pcre-dev
-sudo apt-get install livpcre-dev
-sudo apt-get install libpcre-dev
-sudo apt-get install libpcre3-dev
-sudo pecl install swoole
-ls
-cd /etc/
-vim /etc/php5/cli/php.ini 
-php -i | grep Con
-sudo pecl install redis
-sudo vim /etc/php5/cli/php.ini 
-php -m
-:q
-cd
-ls
-mkdir apps
-cd apps/
-git clone git@115.159.115.215:root/90server.git
-git clone http://115.159.115.215:8021/root/90server.git
-wget https://files.phpmyadmin.net/phpMyAdmin/4.6.0/phpMyAdmin-4.6.0-all-languages.zip
-unzip phpMyAdmin-4.6.0-all-languages.zip 
-sudo apt-get install unzip
-unzip phpMyAdmin-4.6.0-all-languages.zip 
-ls
-rm phpMyAdmin-4.6.0-all-languages.zip 
-cd ../
-cd /etc/nginx/conf.d/
-ls
-cd ../
-ls
-vim nginx.conf 
-cd sites-available/
-ls
-vim default 
-touch phpmyadmin
-sudo vim phpmyadmin 
-cd
-cd apps/
-ls
-mv -r phpMyAdmin-4.6.0-all-languages/ phpmyadmin
-mv -r phpMyAdmin-4.6.0-all-languages/ phpmyadmin/
-mv phpMyAdmin-4.6.0-all-languages/ phpmyadmin/
-ls
-cd phpmyadmin/
-ls
-cd ../../
-sudo chmod -R 777 apps/
-cd /root/apps/
-sudo vim /etc/nginx/sites-available/phpmyadmin 
-sudo service nginx restart
-vim /var/log/nginx/error.log 
-vim /var/log/nginx/access.log 
-sudo vim /etc/nginx/sites-available/phpmyadmin 
-cd /var/run
-ls
-cd
-sudo vim /etc/nginx/sites-available/default 
-sudo rm /etc/nginx/sites-available/default 
-sudo service nginx restart
-sudo vim /etc/nginx/nginx.conf 
-sudo vim /etc/nginx/sites-enabled/
-sudo vim /etc/nginx/sites-enabled/default 
-sudo vim /etc/nginx/nginx.conf 
-sudo mv /etc/nginx/sites-available/phpmyadmin /etc/nginx/sites-enabled/
-sudo service nginx restart
-sudo vim /etc/nginx/sites-enabled/phpmyadmin 
-sudo service nginx restart
-vim /var/log/nginx/error.log 
-cd apps/
-ls
-cd phpmyadmin/
-ls
-vim /var/log/nginx/error.log 
-vim /var/log/nginx/access.log 
-sudo vim /etc/nginx/sites-enabled/phpmyadmin 
-sudo service nginx restart
-vim /var/log/nginx/error.log 
-sudo chmod -R 777 /root/
-sudo service nginx restart
-sudo vim /etc/nginx/nginx.conf 
-sudo service nginx restart
-sudo vim /etc/php5/fpm/php.ini 
-ls
-cd
-cd apps/90server/
-ls
-./restart.sh -r
-ps aux
-exit
-crontab -e
-vim test.php
-crontab -e
-ls
-vim test.
-vim test.txt 
-crontab -e
-exit
-ls
-cd apps/
-ls
-cd 90server/
-ls
-cd scripts/
-ls
-vim log.txt 
-php crontab_monday.php 
-cd ../
-git pull origin master
-vim scripts/crontab_monday.php 
-git fetch origin master
-git reset --hard master
-vim scripts/crontab_monday.php 
-git fetch --all
-git reset --hard origin/master
-vim scripts/crontab_monday.php 
-php scripts/crontab_monday.php 
-git pull origin master
-./restart.sh -r
-exit
-cd apps/
-cd 90server/
-./restart.sh -r
-git pull origin master
-./restart.sh -r
-git pull origin master
-./restart.sh -r
-ls
-vim composer.json 
-compose update
-composer update
-curl -sS https://getcomposer.org/installer | php
-sudo apt-get install curl
-curl -sS https://getcomposer.org/installer | php
-sudo mv composer.phar /usr/local/bin/composer
-composer update
-ls
-cd vendor/
-ls
-cd ../
-vim composer.json 
-cd vendor/
-cd ../
-composer update
-./restart.sh -r
-php -m
-sudo apt-get install php5-curl
-./restart.sh -r
-git fetch --all
-git reset --hard origin/master
-git status
-git pull origin master
-git status
-./restart.sh -r
-ls
-cd vendor/
-ls
-cd ../
-composer update
-./restart.sh -r
-exit
-ls
-cd apps/
-ls
-git clone http://115.159.115.215:8021/root/90web.git
-ls
-cd /etc/nginx/sites-enabled/
-ls
-sudo touch 90web
-sudo vim 90web 
-sudo service nginx restart 
-cd
-sudo chmod -R 777 apps/
-sudo vim /etc/nginx/sites-enabled/90web 
-sudo service nginx restart 
-sudo vim /etc/nginx/sites-enabled/90web 
-cd apps/90web/
-ls
-vim vendor/
-cd vendor/
-ls
-cd ../
-ls
-vim /var/log/nginx/error.log 
-vim composer.json 
-composer update
-exit
-ls
-cd apps/
-cd 90web/
-ls
-cd AP
-ls
-cd Application/
-ls
-cd Runtime/
-ls
-cd Logs/
-ls
-cd Home/
-ls
-vim 16_04_19.log 
-ls
-cd ../../
-ls
-cd ../
-ls
-cd ../
-ls
-cd vendor/
-ls
-cd ../
-ls
-cd Application/
-ls
-cd Home/o
-cd Home/
-ls
-cd COn
-cd Con
-cd Controller/
-ls
-vim PushController.class.php 
-cd ../../
-ls
-cd ../../
-ls
-cd 90server/
-git pull origin master
-mysql -u root -p
-./restart.sh -r
-exit
-cd apps/90
-ls
-cd apps/90server/
-ls
-cd socket/
-ls
-vim 20160419/debug.log
-exit
-cd apps/90server/
-git pull origin master
-./restart.sh -r
-exit
-cd apps/90server/
-git pull origin master
-./restart.sh -r
-git pull origin master
-./restart.sh -r
-git pull origin master
-./restart.sh -r
-git pull origin master
-git fetch -all
-git fetch --all
-git status
-git reset --hard origin/maser
-git reset --hard origin/master
-./restart.sh -r
-exit
-cd apps/90
 cd apps/90server/
 git reset --hard origin/master
 git pull origin master
@@ -1662,3 +1387,614 @@ git status
 git pull
 cd apps/90web/
 git pull
+ls
+cd apps/
+ls
+exit
+cd apps/90web/
+ls
+cd Application/
+ls
+cd Home/
+ls
+cd Controller/
+ls
+vim UserController.class.php 
+exit
+cd apps/90web/
+git pull
+cd apps/90web/
+git pull
+ls
+vim Application/Home/View/User/detail.html
+git status
+gti co Application/Home/View/User/detail.html
+git checkout Application/Home/View/User/detail.html
+git status
+vim Application/Home/View/User/detail.html
+git checkout Application/Home/View/User/cityQuery.html
+git st
+git status
+git checkout Application/Home/View/User/detail.html
+git status
+git stash
+git pull
+vim Application/Home/View/User/detail.html
+git status
+git st
+git status
+git checkout v
+git checkout Application/Home/View/User/detail.html
+git status
+git pull
+cd 
+ls
+cd apps/
+ls
+cd 90server/
+ls
+git log
+ls
+atom .
+ls
+apt-get composer
+which composer
+cat /usr/local/bin/composer
+ls
+cat /etc/nginx/
+ls
+ls apps/
+ls
+ls 90.com/
+ls
+cd 90.com/
+ls
+cd ..
+ls
+cd apps/
+ls
+ls 90server/
+ls
+ls 90server/
+git log
+cd ..
+ls
+cd apps/90server/
+ls
+cat jpush.log 
+ls
+cd ..
+ls
+cd ..
+ls
+ls /etc/nginx/
+ls
+cat /etc/nginx/
+cd /etc/nginx/
+ls
+cat nginx.conf  | less
+ls
+cat nginx.conf  | less
+cd conf.d/
+ls
+ls -A
+ls -a
+cd ..
+ls
+cat nginx.conf  | less
+ls
+cd apps/
+ls
+cd 90server/
+ls
+cat start.sh 
+ls
+cd Application/
+ls
+cd webroot/
+ls
+cat main.php 
+ls
+cd ..
+ls
+cd apps/
+ls
+cd common/
+ls
+cd ..
+ls
+cd ..
+ls
+cd apps/
+ls
+cd apps/
+ls
+cd ..
+mkdir apps_test
+cd apps_test/
+ls
+git pull git@git.coding.net:focinfi/90server.git 90server_test
+git clone git@git.coding.net:focinfi/90server.git 90server_test
+ls
+cd 90server_test/
+ls
+./start.sh 
+ls
+./start.sh 
+pwd
+ls
+cat /root/apps_test/90server_test/Application/webroot/main.php
+ls
+cd ../../
+ls
+cd apps
+cd 90server/
+ls
+cat .gitignore 
+cd ../../
+ls
+cd apps_test/
+ls
+cd 90server_test/
+ls
+composer 
+composer install
+ls
+./start.sh 
+ls
+git pull
+gco test
+git checkout test
+git pull origin test
+git log
+./start.sh 
+./start.sh  -r
+ls
+cd ../..
+ls
+cd apps/
+ls
+c d90we
+cd 90web/
+ls
+git log
+git remote -v
+git push coding master 
+ls
+cd ..
+ls
+cd ..
+ls
+cd apps_test/
+ls
+git clone git@git.coding.net:focinfi/90web.git 90web_test
+ls
+cd 90web_test/
+ls
+bower install
+ls vendor/
+cd ..
+ls
+cd 90web_test/
+ls
+cd ..
+ls
+cd 90server_test/
+ls
+cat restart.sh 
+ps aux | grep 90Server
+cd ../../
+ls
+cd apps/90server/
+ps aux | grep 90Server
+cat stop.sh 
+ps aux | grep 90Server | awk  '{print $2}'
+cat ./stop.sh 
+cd ..
+ls
+cd ../
+ls
+cd app_test
+cd apps_test/
+l
+ls
+cd 90server_test/
+ls
+ps -A | grep 5290
+netstat -A | grep 5290
+netstat -l | grep 5290
+netstat -al | grep 5290
+lsof -Pnl +M -i4 | grep 5290
+ls
+git branh
+git branch
+cd ..
+ls
+lsof -Pnl +M -i4 | grep 8892
+lsof -Pnl +M -i4 | grep 8992
+ls
+lsof -Pnl +M -i4 | grep  5290
+kill -9 4691
+ls
+cd 90server_test/
+ls
+./start.sh -r
+git pull
+git pull origin test
+git log
+:q
+lsof -Pnl +M -i4 | grep  5290
+kill -9 4862
+ls
+lsof -Pnl +M -i4 | grep  5290
+ls
+./start.sh 
+lsof -Pnl +M -i4 | grep  5290
+ls
+cd apps_test/
+ls
+cd 90server_test/
+ls
+./start.sh 
+ls
+./start.sh 
+git branch
+git pull origin test 
+./start.sh 
+ls
+cd ..
+ls
+cd 90web_test/
+ls
+git pull origin test
+git branch
+git fetch origin test
+git log
+cd ../../
+ls
+d apps/90web/
+ls
+git log
+cd 90we
+ls
+cd apps/90web/
+git log
+cddd ../../
+cd ../../
+ls
+cd apps_test/
+ls
+cd 90web_test/
+ls
+git checkout test
+php ./index.php 
+composer install
+php index.php 
+cat index.php 
+apt-get -h
+dpkg
+dpkgdpkg --get-selections | grep postgres
+dpkgdpkg --get-selections | grep *app
+dpkg --get-selections | grep *app
+dpkg --get-selections | grep wampserver
+ls
+cd ..
+ls
+cd ..
+ls
+cd apps
+ls
+cd ../
+cd ..
+cd -
+cd apps/
+ls
+cd 90server/
+ls
+ls 
+cd /etc/
+ls
+cd apps_test/
+ls
+cd 90web_test/
+ls
+pwd
+ls
+cd Application/Runtime/Cache/
+ls
+ls -l
+cd ..
+ls
+ls -l
+chmod 777 -R Cache
+ls
+cd .
+cd ..
+ls
+cd ..
+ls
+cd 90server_test/ 
+ls
+./start.sh -r
+cd apps_test/
+ls
+cd 90web_test/
+ls
+cat index.php 
+vi /etc/nginx/conf.d/
+cd /etc/nginx/
+ls
+cat nginx.conf 
+cat nginx.conf | less
+cd conf.d/
+ls
+cd ..
+ls
+cat nginx.conf | less
+ls sites-enabled/
+ls
+cd sites-enabled/
+ls
+cat 90com 
+ls
+cat 90web 
+cp 90web 90web_test
+vi 90web_test 
+service nginx restart
+cd 
+ls
+cd apps_test/
+ls
+cd 90web_test/
+ls
+git branch
+cd ..
+cd 90server_test
+ls
+git branch 
+cd ..
+ls
+cd 90server_test/
+ls
+cat scripts/
+cd scripts/
+s
+ls
+cat crontab_refresh_question.php 
+cat crontab_refresh_question.php  | less
+php crontab_refresh_question.php 
+cd 
+cd apps_test/
+ls
+cd 90server_test/
+ls
+cd scripts/
+ls
+cat crontab_monday.php 
+cat crontab_monday.php | less
+php crontab_monday.php
+cat crontab_monday.php | less
+ls
+cd apps_test/
+ls
+cd 90server_test/
+lsof -Pnl +M -i4 | grep  5290
+kill -9
+kill -9 8838
+git pull origin test 
+ls
+./start.sh
+./start.sh -r
+git branch
+cd apps_test/
+ls
+cd 90server_test/
+ls
+lsof -Pnl +M -i4 | grep  5290
+kill -9 12308
+./start.sh 
+./start.sh -r
+ls
+cd apps
+ls
+cd 90server/
+ls
+cat ./Application/
+ls
+cd ./Application/
+ls
+cd apps/
+ls
+cd ctrl/
+ls
+vat Login.php | less
+cat Login.php | less
+ls
+cat ../common/
+ls
+cd ../common/
+ls
+cat YXSMS.php 
+cat YXSMS.php |less
+ls
+cd apps_test/
+ls
+cd 90server_test/
+ls
+cd scripts/
+ls
+php crontab_refresh_question.php
+cd apps_test/
+ls
+cd 90server_test/
+ls
+lsof -Pnl +M -i4 | grep  5290
+kill -9 12424
+lsof -Pnl +M -i4 | grep  5290
+git pull origin test 
+./start.sh -r
+crontab -e
+cd apps/90server/
+ls
+cd scripts/
+ls
+vim crontab_refresh_rank.php 
+cd ../
+vim Application/apps/ctrl/Login.php 
+vim Application/apps/dao/user/User.php 
+exit
+ls
+cd apps
+ls
+cd 90server/
+ls
+cat ./Application/
+ls
+cd ./Application/
+ls
+cd apps/
+ls
+cd apps/90server/
+vim Application/apps/ctrl/Login.php 
+exit
+ls
+cd apps_test/
+ls
+cd 90server_test/
+cd scripts/
+ls
+php crontab_refresh_question.php
+ls
+cd ~
+ls
+cat /etc/nginx/
+cd /etc/nginx/
+ls
+cd sites-enabled/
+ls
+cd ~
+ls
+cd ./apps/90server/
+ls
+cat Application/
+cd ./Application/
+cd apps/common/
+ls
+vat PushClient.php 
+cat PushClient.php 
+cd ~
+cd ./apps/90server/
+git log
+cd ../
+cd ../apps_test/
+cd 
+cd apps_test/
+ls
+cd 90server_test/
+ls
+cd scripts/
+ls
+php crontab_refresh_question.php
+ls
+cd /etc/nginx
+ls
+d sites-enabled/n
+d sites-enabled/
+ls
+cd sites-
+cd sites-enabled/
+ls
+cat 90web
+ls
+cd ~
+ls
+cd apps
+ls
+cd 90web/
+pwd
+ls
+git log
+cd ../../apps_test/
+cd 90web_test/
+git log
+cd apps_test/
+ls
+cd 90server_test/
+ls
+cd scripts/
+ls
+php crontab_refresh_question.php
+cd apps_test/
+ls
+cd 90server_test/
+ls
+cd scripts/
+ls
+php crontab_refresh_question.php
+cd apps_test/
+cd 90server_test/
+ls
+cd scripts/
+ls
+php crontab_refresh_question.php
+cd apps_test/
+cd 90server_test/
+cd scripts/
+ls
+php crontab_refresh_question.php
+cd apps
+ls
+cd video/
+ls
+cd ../
+vim index.html 
+git remote -v
+cd 90web/
+git pull
+nginx
+cd apps
+ls
+cd 90server/
+ls
+cd scripts/
+ls
+cd ..
+ls
+./start.sh -r
+/etc/init.d/nginx start
+cd ../
+ls
+cd ../
+ls
+cd apps_test/
+ls
+cd 90server_test/
+ls
+git log
+git branch
+cd ..
+ls
+cd 90server_test/
+ls
+./start.sh -r
+cd ..
+ls
+cd ..
+ls
+cd apps
+ls
+cd 90server/
+ls
+git log
+ls
+git branch
+cd ../..
+ls
+cd apps_test/90
+cd apps_test/90server_test/
+ls
+git loh
+git log
+ls
+scp -r ~/ /Users/SinLemon/Git/NineZero_Server_PHP 
+exit

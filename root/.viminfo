@@ -2,7 +2,7 @@
 # You may edit it if you're careful!
 
 # Value of 'encoding' when this file was written
-*encoding=utf-8
+*encoding=latin1
 
 
 # hlsearch on (H) or off (h):
@@ -16,9 +16,9 @@ $
 # Command Line History (newest to oldest):
 :q
 :wq
+:q!
 :w
 :/chapter-title
-:q!
 :58
 :Q
 
@@ -42,43 +42,62 @@ $
 # Registers:
 "0	LINE	0
 	    }
-""1	LINE	0
-	        $date = 1463328000;
+"1	LINE	0
+	        server_name  101.201.39.169;
 "2	LINE	0
-	
+	            </if>
 "3	LINE	0
-	        }
+	            <if condition="$type eq 1 ">
+	                <form data-url="http://admin.90app.tv/index.php?s=/Home/user/answer" class="form">
 "4	LINE	0
-	            fastcgi_param PATH_INFO $path_info;
+	
 "5	LINE	0
-	            fastcgi_param SCRIPT_NAME $real_script_name;
+	            <if condition="$delta !== 0 ">
 "6	LINE	0
-	            fastcgi_param SCRIPT_FILENAME $document_root$real_script_name;
+	        $date = 1463328000;
 "7	LINE	0
-	            }
+	
 "8	LINE	0
-	                set $path_info $2;
+	        }
 "9	LINE	0
-	                set $real_script_name $1;
-"-	CHAR	0
-	27ae5d40be5c
+	            fastcgi_param PATH_INFO $path_info;
+""-	CHAR	0
+	/root/apps/90web/;
 
 # File marks:
-'0  14  0  ~/apps/90web/Application/Home/View/User/detail.html
-'1  40  25  ~/apps/90web/Application/Home/View/User/detail.html
-'2  134  0  ~/apps/90server/ZPHP/Socket/Adapter/Swoole.php
-'3  93  0  ~/apps/90server/Application/apps/ctrl/Common.php
-'4  27  33  ~/apps/90server/tests/Common.php
-'5  76  0  ~/apps/90server/Application/apps/common/Common.php
-'6  268  8  ~/apps/90server/Application/apps/ctrl/Question.php
-'7  1  0  ~/.ssh/id_rsa.pub
-'8  1  0  ~/.ssh/known_hosts
-'9  124  0  ~/apps/index.html
+'0  1  0  ~/apps/index.html
+'1  110  0  ~/apps/90server/Application/apps/ctrl/Login.php
+'2  327  0  ~/apps/90server/Application/apps/dao/user/User.php
+'3  149  0  ~/apps/90server/Application/apps/ctrl/Login.php
+'4  20  0  ~/apps/90server/scripts/crontab_refresh_rank.php
+'5  29  0  /etc/nginx/sites-enabled/90web_test
+'6  1  0  /etc/nginx/conf.d
+'7  45  19  ~/apps/90web/Application/Home/View/User/detail.html
+'8  37  20  ~/apps/90web/Application/Home/View/User/detail.html
+'9  41  32  ~/apps/90web/Application/Home/View/User/detail.html
 
 # Jumplist (newest first):
--'  14  0  ~/apps/90web/Application/Home/View/User/detail.html
+-'  1  0  ~/apps/index.html
+-'  110  0  ~/apps/90server/Application/apps/ctrl/Login.php
+-'  1  0  ~/apps/90server/Application/apps/ctrl/Login.php
+-'  327  0  ~/apps/90server/Application/apps/dao/user/User.php
+-'  1  0  ~/apps/90server/Application/apps/dao/user/User.php
+-'  149  0  ~/apps/90server/Application/apps/ctrl/Login.php
+-'  20  0  ~/apps/90server/scripts/crontab_refresh_rank.php
+-'  1  0  ~/apps/90server/scripts/crontab_refresh_rank.php
+-'  29  0  /etc/nginx/sites-enabled/90web_test
+-'  5  30  /etc/nginx/sites-enabled/90web_test
+-'  4  8  /etc/nginx/sites-enabled/90web_test
+-'  1  0  /etc/nginx/sites-enabled/90web_test
+-'  1  0  /etc/nginx/conf.d
+-'  45  19  ~/apps/90web/Application/Home/View/User/detail.html
 -'  1  0  ~/apps/90web/Application/Home/View/User/detail.html
--'  40  25  ~/apps/90web/Application/Home/View/User/detail.html
+-'  37  20  ~/apps/90web/Application/Home/View/User/detail.html
+-'  42  20  ~/apps/90web/Application/Home/View/User/detail.html
+-'  41  32  ~/apps/90web/Application/Home/View/User/detail.html
+-'  71  7  ~/apps/90web/Application/Home/Controller/UserController.class.php
+-'  1  0  ~/apps/90web/Application/Home/Controller/UserController.class.php
+-'  14  0  ~/apps/90web/Application/Home/View/User/detail.html
 -'  134  0  ~/apps/90server/ZPHP/Socket/Adapter/Swoole.php
 -'  1  0  ~/apps/90server/ZPHP/Socket/Adapter/Swoole.php
 -'  93  0  ~/apps/90server/Application/apps/ctrl/Common.php
@@ -92,7 +111,6 @@ $
 -'  1  0  ~/.ssh/id_rsa.pub
 -'  1  0  ~/.ssh/known_hosts
 -'  124  0  ~/apps/index.html
--'  1  0  ~/apps/index.html
 -'  1  0  /etc/nginx/sites-enabled/90com
 -'  2  22  /etc/nginx/sites-enabled/90web
 -'  1  0  /etc/nginx/sites-enabled/90web
@@ -156,29 +174,70 @@ $
 -'  279  10  ~/apps/90server/Application/apps/ctrl/Answer.php
 -'  233  0  ~/apps/90server/Application/apps/ctrl/Question.php
 -'  252  0  ~/apps/90server/Application/apps/ctrl/Question.php
--'  292  20  ~/apps/90server/Application/apps/ctrl/Answer.php
--'  6  0  ~/apps/90server/Application/apps/dao/ticket/Ticket.php
--'  1  0  ~/apps/90server/Application/apps/dao/ticket/Ticket.php
--'  475  0  ~/apps/90server/Application/apps/ctrl/Answer.php
--'  286  39  ~/apps/90server/Application/apps/ctrl/Answer.php
--'  125  0  ~/apps/90server/Application/apps/ctrl/Answer.php
--'  1  0  Application/apps/ctrl/Answer.php
--'  141  4  ~/apps/90server/Application/apps/ctrl/Answer.php
--'  111  0  ~/apps/90server/Application/apps/ctrl/Answer.php
--'  183  0  ~/apps/90server/Application/apps/ctrl/Answer.php
--'  46  41  ~/apps/90server/tests/Question.php
--'  251  0  ~/apps/90server/Application/apps/dao/question/Question.php
--'  1  0  ~/apps/90server/Application/apps/dao/Question.php
--'  165  0  ~/apps/90server/Application/apps/ctrl/Question.php
--'  164  0  ~/apps/90server/Application/apps/ctrl/Question.php
--'  246  0  ~/apps/90server/Application/apps/dao/question/Question.php
--'  180  0  ~/apps/90server/Application/apps/ctrl/Question.php
--'  45  37  ~/apps/90server/tests/Question.php
 
 # History of marks within files (newest to oldest):
 
+> ~/apps/index.html
+	"	1	0
+
+> ~/apps/90server/Application/apps/ctrl/Login.php
+	"	110	0
+	.	133	0
+	+	115	0
+	+	115	0
+	+	115	0
+	+	115	22
+	+	156	7
+	+	156	1
+	+	156	27
+	+	115	0
+	+	156	0
+	+	133	0
+	+	133	0
+
+> ~/apps/90server/Application/apps/dao/user/User.php
+	"	327	0
+	^	29	31
+	.	79	0
+	+	79	36
+	+	79	62
+	+	24	15
+	+	25	23
+	+	24	0
+	+	25	0
+	+	79	0
+
+> ~/apps/90server/scripts/crontab_refresh_rank.php
+	"	20	0
+
+> /etc/nginx/sites-enabled/90web_test
+	"	29	0
+	^	5	40
+	.	5	39
+	+	4	21
+	+	2	24
+	+	4	0
+	+	3	8
+	+	5	0
+	+	6	0
+	+	5	39
+
 > ~/apps/90web/Application/Home/View/User/detail.html
-	"	14	0
+	"	45	19
+	^	45	20
+	.	45	19
+	+	41	0
+	+	39	0
+	+	50	0
+	+	37	27
+	+	38	42
+	+	45	19
+
+> ~/apps/90web/Application/Home/Controller/UserController.class.php
+	"	71	7
+	^	71	8
+	.	71	7
+	+	71	7
 
 > ~/apps/90server/ZPHP/Socket/Adapter/Swoole.php
 	"	134	0
@@ -217,9 +276,6 @@ $
 
 > ~/.ssh/known_hosts
 	"	1	0
-
-> ~/apps/index.html
-	"	124	0
 
 > /etc/nginx/sites-enabled/90com
 	"	1	0
@@ -418,33 +474,6 @@ $
 
 > ~/apps/90server/Application/apps/ctrl/Pet.php
 	"	108	0
-
-> ~/apps/90server/Application/apps/dao/user/User.php
-	"	295	0
-	^	29	31
-	.	79	0
-	+	79	36
-	+	79	62
-	+	24	15
-	+	25	23
-	+	24	0
-	+	25	0
-	+	79	0
-
-> ~/apps/90server/Application/apps/ctrl/Login.php
-	"	66	0
-	.	133	0
-	+	115	0
-	+	115	0
-	+	115	0
-	+	115	22
-	+	156	7
-	+	156	1
-	+	156	27
-	+	115	0
-	+	156	0
-	+	133	0
-	+	133	0
 
 > ~/apps/90server/socket/20160427/debug.log
 	"	2970	0
