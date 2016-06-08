@@ -1,63 +1,3 @@
-cd apps/90server/
-git reset --hard origin/master
-git pull origin master
-./restart.sh -r
-exit
-ls
-mysql -u root
-mysql -u root -p
-cd apps/90server/
-git pull origin maser
-git pull origin master
-./restart.sh -r
-cd ../
-ls
-cd 90web/
-l
-ls
-cd apps/
-ls
-cd 90web/
-git pull
-git status
-git checkout *
-git status
-git pull
-cd /etc
-ls
-cd nginx/
-ls
-cd conf.d/
-ls
-cd ../
-cd sites-
-cd sites-enabled/
-ls
-vim 90web 
-cd apps/
-cd 90web/
-ls
-git pull origin master
-git status
-ls
-exit
-cd apps/90web/
-vim Application/Home/Controller/IndexController.class.php 
-cd apps/90web/
-ls
-vim Application/Home/Controller/IndexController.class.php 
-cd apps/90server/
-ls
-git pull origin master
-./restart.sh 
-git pull origin master
-./restart.sh -r
-vim socket/20160421/
-vim socket/20160421/debug.log 
-git pull origin master
-./restart.sh -r
-git pull origin master
-./restart.sh 
 git pull origin master
 ./restart.sh 
 git pull origin master
@@ -1997,4 +1937,64 @@ git loh
 git log
 ls
 scp -r ~/ /Users/SinLemon/Git/NineZero_Server_PHP 
+exit
+ls
+cd apps
+cd 90server/
+cd scripts/
+ls
+php crontab_refresh_rank.php
+cd apps
+cd 90server/
+ls
+cd scripts/
+ls
+php crontab_refresh_rank.php
+cd apps_test/
+cd ..
+cd apps_test/
+ls
+cd 90server_test/
+ls
+cd ../../
+ls
+cd apps/90server/
+ls
+cd scripts/
+ls
+php crontab_refresh_question.php
+php crontab_refresh_rank.php
+cd apps
+cd 90server/
+ls
+cd scripts/
+ls
+php crontab_refresh_rank.php
+exit
+ls
+cd apps_test/
+ls
+cd 90server_test/
+ls
+cd scripts/
+ls
+php crontab_refresh_question.php
+cd ..
+ls
+cd ..
+ls
+cd apps
+ls
+cd 90server/
+ls
+cd Application/
+ls
+cd apps/
+ls
+cd common/
+ls
+vim PushClient.php 
+cd ../../../
+ls
+./restart.sh -r
 exit

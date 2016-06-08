@@ -2,7 +2,7 @@
 # You may edit it if you're careful!
 
 # Value of 'encoding' when this file was written
-*encoding=latin1
+*encoding=utf-8
 
 
 # hlsearch on (H) or off (h):
@@ -14,8 +14,8 @@
 $
 
 # Command Line History (newest to oldest):
-:q
 :wq
+:q
 :q!
 :w
 :/chapter-title
@@ -65,18 +65,20 @@ $
 	/root/apps/90web/;
 
 # File marks:
-'0  1  0  ~/apps/index.html
-'1  110  0  ~/apps/90server/Application/apps/ctrl/Login.php
-'2  327  0  ~/apps/90server/Application/apps/dao/user/User.php
-'3  149  0  ~/apps/90server/Application/apps/ctrl/Login.php
-'4  20  0  ~/apps/90server/scripts/crontab_refresh_rank.php
-'5  29  0  /etc/nginx/sites-enabled/90web_test
-'6  1  0  /etc/nginx/conf.d
-'7  45  19  ~/apps/90web/Application/Home/View/User/detail.html
-'8  37  20  ~/apps/90web/Application/Home/View/User/detail.html
-'9  41  32  ~/apps/90web/Application/Home/View/User/detail.html
+'0  46  47  ~/apps/90server/Application/apps/common/PushClient.php
+'1  1  0  ~/apps/index.html
+'2  110  0  ~/apps/90server/Application/apps/ctrl/Login.php
+'3  327  0  ~/apps/90server/Application/apps/dao/user/User.php
+'4  149  0  ~/apps/90server/Application/apps/ctrl/Login.php
+'5  20  0  ~/apps/90server/scripts/crontab_refresh_rank.php
+'6  29  0  /etc/nginx/sites-enabled/90web_test
+'7  1  0  /etc/nginx/conf.d
+'8  45  19  ~/apps/90web/Application/Home/View/User/detail.html
+'9  37  20  ~/apps/90web/Application/Home/View/User/detail.html
 
 # Jumplist (newest first):
+-'  46  47  ~/apps/90server/Application/apps/common/PushClient.php
+-'  1  0  ~/apps/90server/Application/apps/common/PushClient.php
 -'  1  0  ~/apps/index.html
 -'  110  0  ~/apps/90server/Application/apps/ctrl/Login.php
 -'  1  0  ~/apps/90server/Application/apps/ctrl/Login.php
@@ -176,6 +178,13 @@ $
 -'  252  0  ~/apps/90server/Application/apps/ctrl/Question.php
 
 # History of marks within files (newest to oldest):
+
+> ~/apps/90server/Application/apps/common/PushClient.php
+	"	46	47
+	^	46	48
+	.	46	47
+	+	67	47
+	+	46	47
 
 > ~/apps/index.html
 	"	1	0
