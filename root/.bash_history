@@ -1,82 +1,3 @@
-git pull origin master
-./restart.sh 
-git pull origin master
-./restart.sh 
-git pull origin master
-./restart.sh 
-git pull origin master
-./restart.sh 
-git pull origin master
-./restart.sh -r
-git pull origin master
-./restart.sh 
-git pull origin master
-./restart.sh -r
-git pull origin master
-./restart.sh -r
-vim socket/20160421/debug.log 
-git pull origin master
-./restart.sh -r
-vim socket/20160421/debug.log 
-git pull origin master
-./restart.sh -r
-git pull origin master
-./restart.sh -r
-cd apps/90server/
-./restart.sh -r
-exit
-cd apps/90web/
-git pull
-cd apps/90server/
-git pull origin master
-./restart.sh -r
-exit
-cd apps/90server/
-./restart.sh -r
-git pull origin master
-./restart.sh -r
-exit
-mysql -u root -p
-exit
-cd apps/90server/
-git pull origin master
-./restart.sh -r
-cd
-cd ../
-ls
-cd root/
-ls
-cd apps/
-ls
-cd 90web/
-ls
-cd Application/
-ls
-cd Home/
-ls
-cd COn
-cd Con
-cd Controller/
-ls
-vim QuestionController.class.php 
-exit
-cd apps/90server/
-git pull origin master
-./restart.sh -r
-cd apps/90server/
-git pull origin master
-./restart.sh -r
-exit
-cd apps/90web/
-git pull
-git status
-git diff Application/
-git checkout Application/
-git pull
-cd apps/90server/
-git pull origin master
-./restart.sh -r
-git pull origin master
 ./restart.sh -r
 git pull origin master
 ./restart.sh -r
@@ -1998,3 +1919,82 @@ cd ../../../
 ls
 ./restart.sh -r
 exit
+cd apps
+ls
+cd 90server/
+ls
+git log
+ls
+cd ..
+cd 90web/
+ls
+git log
+ls
+cd ..
+ls
+cd ../apps_test/
+ls
+cd 90web_test/
+ls
+git log
+cd ..
+cd apps_test/
+cd ../apps
+;s
+ls
+cd 90server/
+ls
+git log
+ls
+cd apps_test
+ls
+cd 90server_test/
+cd scripts/
+ls
+php crontab_refresh_question.php
+ls
+cd apps
+ls
+cd 90server/
+ls
+cd scripts/
+ls
+php crontab_refresh_rank.php
+cd 
+ls
+cd apps_test/
+ls
+cd 90server_test/
+ls
+cd scripts/
+ls
+php crontab_refresh_question.php
+cd apps_test/
+ls
+cd 90server_test/
+cd scripts/
+ls
+php crontab_refresh_question.php
+ls
+cd 90.com/
+ls
+cd ..
+rm 90.com
+rm -rf 90.com
+ls
+cd apps
+ls
+pwd
+cd images/
+ls
+cd custom/
+ls
+cd ...
+ls
+cd ...
+cd ..
+git pull
+cd 90web/
+git pull
+cd ..
+ls
