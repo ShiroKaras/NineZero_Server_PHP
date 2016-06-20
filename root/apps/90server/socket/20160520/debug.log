@@ -1,0 +1,996 @@
+2016-05-20 00:30:37
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42S22]: Column not found: 1054 Unknown column \'notice_id\' in \'field list\'',
+  'code' => '42S22',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+  \'user_id\' => \'2016052000303775478\',
+  \'notice_id\' => \'2016052000303754458\',
+  \'time\' => 1463675437,
+  \'title\' => \'\',
+  \'content\' => \'这是你的第一枚金币，just keep it.\',
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/user/Info.php',
+      'line' => 423,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Insert::__set_state(array(
+   \'col_on_update_values\' => NULL,
+   \'into\' => \'90_user_answer\',
+   \'last_insert_id_names\' => 
+  array (
+  ),
+   \'row\' => 0,
+   \'col_values_bulk\' => 
+  array (
+  ),
+   \'bind_values_bulk\' => 
+  array (
+  ),
+   \'col_order\' => 
+  array (
+  ),
+   \'col_values\' => 
+  array (
+    \'`user_id`\' => \':user_id\',
+    \'`notice_id`\' => \':notice_id\',
+    \'`time`\' => \':time\',
+    \'`title`\' => \':title\',
+    \'`content`\' => \':content\',
+  ),
+   \'returning\' => 
+  array (
+  ),
+   \'bind_values\' => 
+  array (
+    \'user_id\' => \'2016052000303775478\',
+    \'notice_id\' => \'2016052000303754458\',
+    \'time\' => 1463675437,
+    \'title\' => \'\',
+    \'content\' => \'这是你的第一枚金币，just keep it.\',
+  ),
+   \'where\' => 
+  array (
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'sendNotice',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\user\\Info',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Login.php',
+      'line' => 107,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'sendNotice\'',
+        1 => '\'这是你的第一枚金币，just keep it.\'',
+        2 => '\'\'',
+        3 => '1463675437',
+        4 => '\'2016052000303775478\'',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'login_third',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Login',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 1668,
+   \'header\' => 
+  array (
+    \'host\' => \'101.201.39.169:8992\',
+    \'accept\' => \'*/*\',
+    \'accept-encoding\' => \'gzip, deflate\',
+    \'content-length\' => \'213\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'accept-language\' => \'zh-Hans-CN;q=1\',
+    \'connection\' => \'keep-alive\',
+    \'user-agent\' => \'NineZeroProject/1.0 (iPhone; iOS 9.3.1; Scale/2.00)\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Login/login_third\',
+    \'path_info\' => \'/Login/login_third\',
+    \'request_time\' => 1463675437,
+    \'request_time_float\' => 1463675437.197808,
+    \'server_port\' => 8992,
+    \'remote_port\' => 52886,
+    \'remote_addr\' => \'123.120.246.124\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'third_id\' => \'orNcGwgyZMD_qUtJj1nv58dmSLBU\',
+    \'user_area_id\' => \'010\',
+    \'user_avatar\' => \'http://wx.qlogo.cn/mmopen/A0zaNxC5L5vn1iaib1Acm8qtLwriczKdpXP7Fic9P0O2aMtzMj1dsr6ERibgY1L3OPJJ6R3yUeofQdMbzgwbSn2yEmEp1gzso34OZ/0\',
+    \'user_name\' => \'ZHIL\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 1668,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-20 23:40:05
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry \'2016051115142350700-1\' for key \'PRIMARY\'',
+  'code' => '23000',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+  \'user_id\' => \'2016051115142350700\',
+  \'ticket_id\' => \'1\',
+  \'code\' => \'81606093\',
+  \'create_time\' => 1463758805,
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/ticket/Ticket.php',
+      'line' => 49,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Insert::__set_state(array(
+   \'col_on_update_values\' => NULL,
+   \'into\' => \'90_user_ticket\',
+   \'last_insert_id_names\' => 
+  array (
+  ),
+   \'row\' => 0,
+   \'col_values_bulk\' => 
+  array (
+  ),
+   \'bind_values_bulk\' => 
+  array (
+  ),
+   \'col_order\' => 
+  array (
+  ),
+   \'col_values\' => 
+  array (
+    \'`user_id`\' => \':user_id\',
+    \'`ticket_id`\' => \':ticket_id\',
+    \'`code`\' => \':code\',
+    \'`create_time`\' => \':create_time\',
+  ),
+   \'returning\' => 
+  array (
+  ),
+   \'bind_values\' => 
+  array (
+    \'user_id\' => \'2016051115142350700\',
+    \'ticket_id\' => \'1\',
+    \'code\' => \'81606093\',
+    \'create_time\' => 1463758805,
+  ),
+   \'where\' => 
+  array (
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'_9\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'giveTicket',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\ticket\\Ticket',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Answer.php',
+      'line' => 461,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'giveTicket\'',
+        1 => '\'2016051115142350700\'',
+        2 => '\'1\'',
+        3 => '\'81606093\'',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Answer.php',
+      'line' => 281,
+      'function' => 'addTicket',
+      'args' => 
+      array (
+        0 => '\'2016051115142350700\'',
+        1 => '\'1\'',
+      ),
+      'class' => 'ctrl\\Answer',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Answer.php',
+      'line' => 196,
+      'function' => 'giveReward',
+      'args' => 
+      array (
+        0 => '\'2016051115142350700\'',
+        1 => '\'2016051915371731260\'',
+        2 => '\'1462891614\'',
+      ),
+      'class' => 'ctrl\\Answer',
+      'type' => '->',
+    ),
+    6 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'answerAR',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Answer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    8 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 2411,
+   \'header\' => 
+  array (
+    \'host\' => \'101.201.39.169:8992\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'connection\' => \'keep-alive\',
+    \'accept\' => \'*/*\',
+    \'user-agent\' => \'NineZeroProject/1.0 (iPhone; iOS 9.3.1; Scale/3.00)\',
+    \'accept-language\' => \'zh-Hans-CN;q=1\',
+    \'accept-encoding\' => \'gzip, deflate\',
+    \'content-length\' => \'112\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Answer/answerAR\',
+    \'path_info\' => \'/Answer/answerAR\',
+    \'request_time\' => 1463758805,
+    \'request_time_float\' => 1463758805.27545,
+    \'server_port\' => 8992,
+    \'remote_port\' => 63388,
+    \'remote_addr\' => \'61.148.244.32\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'area_id\' => \'010\',
+    \'lat\' => \'39.92362114800347\',
+    \'lng\' => \'116.5195806206597\',
+    \'question\' => \'2016051915371731260\',
+    \'user_id\' => \'2016051115142350700\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 2411,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    11 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    12 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-20 23:40:15
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry \'2016051115294308266-1\' for key \'PRIMARY\'',
+  'code' => '23000',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+  \'user_id\' => \'2016051115294308266\',
+  \'ticket_id\' => \'1\',
+  \'code\' => \'62321403\',
+  \'create_time\' => 1463758815,
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/ticket/Ticket.php',
+      'line' => 49,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Insert::__set_state(array(
+   \'col_on_update_values\' => NULL,
+   \'into\' => \'90_user_ticket\',
+   \'last_insert_id_names\' => 
+  array (
+  ),
+   \'row\' => 0,
+   \'col_values_bulk\' => 
+  array (
+  ),
+   \'bind_values_bulk\' => 
+  array (
+  ),
+   \'col_order\' => 
+  array (
+  ),
+   \'col_values\' => 
+  array (
+    \'`user_id`\' => \':user_id\',
+    \'`ticket_id`\' => \':ticket_id\',
+    \'`code`\' => \':code\',
+    \'`create_time`\' => \':create_time\',
+  ),
+   \'returning\' => 
+  array (
+  ),
+   \'bind_values\' => 
+  array (
+    \'user_id\' => \'2016051115294308266\',
+    \'ticket_id\' => \'1\',
+    \'code\' => \'62321403\',
+    \'create_time\' => 1463758815,
+  ),
+   \'where\' => 
+  array (
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'_11\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'giveTicket',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\ticket\\Ticket',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Answer.php',
+      'line' => 461,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'giveTicket\'',
+        1 => '\'2016051115294308266\'',
+        2 => '\'1\'',
+        3 => '\'62321403\'',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Answer.php',
+      'line' => 281,
+      'function' => 'addTicket',
+      'args' => 
+      array (
+        0 => '\'2016051115294308266\'',
+        1 => '\'1\'',
+      ),
+      'class' => 'ctrl\\Answer',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Answer.php',
+      'line' => 196,
+      'function' => 'giveReward',
+      'args' => 
+      array (
+        0 => '\'2016051115294308266\'',
+        1 => '\'2016051915371731260\'',
+        2 => '\'1462891614\'',
+      ),
+      'class' => 'ctrl\\Answer',
+      'type' => '->',
+    ),
+    6 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'answerAR',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Answer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    8 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 2415,
+   \'header\' => 
+  array (
+    \'host\' => \'101.201.39.169:8992\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'connection\' => \'keep-alive\',
+    \'accept\' => \'*/*\',
+    \'user-agent\' => \'NineZeroProject/1.0 (iPhone; iOS 9.3.2; Scale/2.00)\',
+    \'accept-language\' => \'en-CN;q=1, zh-Hans-CN;q=0.9\',
+    \'accept-encoding\' => \'gzip, deflate\',
+    \'content-length\' => \'112\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Answer/answerAR\',
+    \'path_info\' => \'/Answer/answerAR\',
+    \'request_time\' => 1463758815,
+    \'request_time_float\' => 1463758815.4015911,
+    \'server_port\' => 8992,
+    \'remote_port\' => 45604,
+    \'remote_addr\' => \'61.148.243.178\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'area_id\' => \'010\',
+    \'lat\' => \'39.92355523003472\',
+    \'lng\' => \'116.5195396592882\',
+    \'question\' => \'2016051915371731260\',
+    \'user_id\' => \'2016051115294308266\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 2415,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    11 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    12 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-20 23:53:55
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42S22]: Column not found: 1054 Unknown column \'notice_id\' in \'field list\'',
+  'code' => '42S22',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+  \'user_id\' => \'2016052023535546536\',
+  \'notice_id\' => \'2016052023535560309\',
+  \'time\' => 1463759635,
+  \'title\' => \'\',
+  \'content\' => \'这是你的第一枚金币，just keep it.\',
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/user/Info.php',
+      'line' => 423,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Insert::__set_state(array(
+   \'col_on_update_values\' => NULL,
+   \'into\' => \'90_user_answer\',
+   \'last_insert_id_names\' => 
+  array (
+  ),
+   \'row\' => 0,
+   \'col_values_bulk\' => 
+  array (
+  ),
+   \'bind_values_bulk\' => 
+  array (
+  ),
+   \'col_order\' => 
+  array (
+  ),
+   \'col_values\' => 
+  array (
+    \'`user_id`\' => \':user_id\',
+    \'`notice_id`\' => \':notice_id\',
+    \'`time`\' => \':time\',
+    \'`title`\' => \':title\',
+    \'`content`\' => \':content\',
+  ),
+   \'returning\' => 
+  array (
+  ),
+   \'bind_values\' => 
+  array (
+    \'user_id\' => \'2016052023535546536\',
+    \'notice_id\' => \'2016052023535560309\',
+    \'time\' => 1463759635,
+    \'title\' => \'\',
+    \'content\' => \'这是你的第一枚金币，just keep it.\',
+  ),
+   \'where\' => 
+  array (
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'sendNotice',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\user\\Info',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Login.php',
+      'line' => 107,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'sendNotice\'',
+        1 => '\'这是你的第一枚金币，just keep it.\'',
+        2 => '\'\'',
+        3 => '1463759635',
+        4 => '\'2016052023535546536\'',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'login_third',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Login',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 2492,
+   \'header\' => 
+  array (
+    \'host\' => \'101.201.39.169:8992\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'accept\' => \'*/*\',
+    \'connection\' => \'keep-alive\',
+    \'user-agent\' => \'NineZeroProject/1.0 (iPhone; iOS 9.3.1; Scale/3.00)\',
+    \'accept-language\' => \'zh-Hans-CN;q=1\',
+    \'accept-encoding\' => \'gzip, deflate\',
+    \'content-length\' => \'215\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Login/login_third\',
+    \'path_info\' => \'/Login/login_third\',
+    \'request_time\' => 1463759635,
+    \'request_time_float\' => 1463759635.7383749,
+    \'server_port\' => 8992,
+    \'remote_port\' => 57410,
+    \'remote_addr\' => \'123.120.246.124\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'cookie\' => 
+  array (
+    \'PHPSESSID\' => \'0vnnrpuedhaslno1gc8j71ppb2\',
+  ),
+   \'post\' => 
+  array (
+    \'third_id\' => \'orNcGwh1SiFC0TcN6YFK2i6kK-wI\',
+    \'user_area_id\' => \'010\',
+    \'user_avatar\' => \'http://wx.qlogo.cn/mmopen/ial7iaeW0NNkHOwLW0OI33ZkppgmOdcEvbciaM7Ew28NkHFJHnh668QB0okibic2iaHeBYyKRbGVJV7aHohPml20dm3XIt8ticg6d1G/0\',
+    \'user_name\' => \'ling\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 2492,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)

@@ -1,0 +1,4543 @@
+2016-05-03 17:06:25
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \')
+    AND qid =\' at line 6',
+  'code' => '42000',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/question/Question.php',
+      'line' => 225,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Select::__set_state(array(
+   \'union\' => 
+  array (
+  ),
+   \'for_update\' => false,
+   \'cols\' => 
+  array (
+    \'rank\' => \'count(user_id)\',
+  ),
+   \'from\' => 
+  array (
+    0 => 
+    array (
+      0 => \'`90_user_answer`\',
+    ),
+  ),
+   \'from_key\' => 0,
+   \'group_by\' => 
+  array (
+  ),
+   \'having\' => 
+  array (
+  ),
+   \'page\' => 0,
+   \'paging\' => 10,
+   \'table_refs\' => 
+  array (
+    \'90_user_answer\' => \'FROM 90_user_answer\',
+  ),
+   \'bind_values\' => 
+  array (
+  ),
+   \'where\' => 
+  array (
+    0 => \'answer_time < (select answer_time from 90_user_answer where user_id = 2016042913205306701 and qid = )\',
+    1 => \'AND qid = \',
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'_506\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'getAnsweredQuestion',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\question\\Question',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Question.php',
+      'line' => 175,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getAnsweredQuestion\'',
+        1 => '\'2016042913205306701\'',
+        2 => 'NULL',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getReward',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 1373,
+   \'header\' => 
+  array (
+    \'content-length\' => \'80\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'host\' => \'101.201.39.169:8992\',
+    \'connection\' => \'Keep-Alive\',
+    \'user-agent\' => \'Apache-HttpClient/UNAVAILABLE (java 1.4)\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getReward\',
+    \'path_info\' => \'/Question/getReward\',
+    \'request_time\' => 1462266385,
+    \'request_time_float\' => 1462266385.9617431,
+    \'server_port\' => 8992,
+    \'remote_port\' => 37469,
+    \'remote_addr\' => \'123.120.230.5\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'question_id\' => \'2016042217460792342\',
+    \'reward_id\' => \'1461598124\',
+    \'user_id\' => \'2016042913205306701\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 1373,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-03 17:06:25
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \')
+    AND qid =\' at line 6',
+  'code' => '42000',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/question/Question.php',
+      'line' => 225,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Select::__set_state(array(
+   \'union\' => 
+  array (
+  ),
+   \'for_update\' => false,
+   \'cols\' => 
+  array (
+    \'rank\' => \'count(user_id)\',
+  ),
+   \'from\' => 
+  array (
+    0 => 
+    array (
+      0 => \'`90_user_answer`\',
+    ),
+  ),
+   \'from_key\' => 0,
+   \'group_by\' => 
+  array (
+  ),
+   \'having\' => 
+  array (
+  ),
+   \'page\' => 0,
+   \'paging\' => 10,
+   \'table_refs\' => 
+  array (
+    \'90_user_answer\' => \'FROM 90_user_answer\',
+  ),
+   \'bind_values\' => 
+  array (
+  ),
+   \'where\' => 
+  array (
+    0 => \'answer_time < (select answer_time from 90_user_answer where user_id = 2016042913205306701 and qid = )\',
+    1 => \'AND qid = \',
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'_507\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'getAnsweredQuestion',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\question\\Question',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Question.php',
+      'line' => 175,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getAnsweredQuestion\'',
+        1 => '\'2016042913205306701\'',
+        2 => 'NULL',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getReward',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 1373,
+   \'header\' => 
+  array (
+    \'content-length\' => \'80\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'host\' => \'101.201.39.169:8992\',
+    \'connection\' => \'Keep-Alive\',
+    \'user-agent\' => \'Apache-HttpClient/UNAVAILABLE (java 1.4)\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getReward\',
+    \'path_info\' => \'/Question/getReward\',
+    \'request_time\' => 1462266385,
+    \'request_time_float\' => 1462266385.9617431,
+    \'server_port\' => 8992,
+    \'remote_port\' => 37469,
+    \'remote_addr\' => \'123.120.230.5\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'question_id\' => \'2016042217460792342\',
+    \'reward_id\' => \'1461598124\',
+    \'user_id\' => \'2016042913205306701\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 1373,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-03 17:08:41
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \')
+    AND qid =\' at line 6',
+  'code' => '42000',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/question/Question.php',
+      'line' => 225,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Select::__set_state(array(
+   \'union\' => 
+  array (
+  ),
+   \'for_update\' => false,
+   \'cols\' => 
+  array (
+    \'rank\' => \'count(user_id)\',
+  ),
+   \'from\' => 
+  array (
+    0 => 
+    array (
+      0 => \'`90_user_answer`\',
+    ),
+  ),
+   \'from_key\' => 0,
+   \'group_by\' => 
+  array (
+  ),
+   \'having\' => 
+  array (
+  ),
+   \'page\' => 0,
+   \'paging\' => 10,
+   \'table_refs\' => 
+  array (
+    \'90_user_answer\' => \'FROM 90_user_answer\',
+  ),
+   \'bind_values\' => 
+  array (
+  ),
+   \'where\' => 
+  array (
+    0 => \'answer_time < (select answer_time from 90_user_answer where user_id = 2016042913205306701 and qid = )\',
+    1 => \'AND qid = \',
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'_196\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'getAnsweredQuestion',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\question\\Question',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Question.php',
+      'line' => 175,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getAnsweredQuestion\'',
+        1 => '\'2016042913205306701\'',
+        2 => 'NULL',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getReward',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 1375,
+   \'header\' => 
+  array (
+    \'content-length\' => \'80\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'host\' => \'101.201.39.169:8992\',
+    \'connection\' => \'Keep-Alive\',
+    \'user-agent\' => \'Apache-HttpClient/UNAVAILABLE (java 1.4)\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getReward\',
+    \'path_info\' => \'/Question/getReward\',
+    \'request_time\' => 1462266521,
+    \'request_time_float\' => 1462266521.899822,
+    \'server_port\' => 8992,
+    \'remote_port\' => 36886,
+    \'remote_addr\' => \'123.120.230.5\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'question_id\' => \'2016042217460792342\',
+    \'reward_id\' => \'1461598124\',
+    \'user_id\' => \'2016042913205306701\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 1375,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-03 17:08:41
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \')
+    AND qid =\' at line 6',
+  'code' => '42000',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/question/Question.php',
+      'line' => 225,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Select::__set_state(array(
+   \'union\' => 
+  array (
+  ),
+   \'for_update\' => false,
+   \'cols\' => 
+  array (
+    \'rank\' => \'count(user_id)\',
+  ),
+   \'from\' => 
+  array (
+    0 => 
+    array (
+      0 => \'`90_user_answer`\',
+    ),
+  ),
+   \'from_key\' => 0,
+   \'group_by\' => 
+  array (
+  ),
+   \'having\' => 
+  array (
+  ),
+   \'page\' => 0,
+   \'paging\' => 10,
+   \'table_refs\' => 
+  array (
+    \'90_user_answer\' => \'FROM 90_user_answer\',
+  ),
+   \'bind_values\' => 
+  array (
+  ),
+   \'where\' => 
+  array (
+    0 => \'answer_time < (select answer_time from 90_user_answer where user_id = 2016042913205306701 and qid = )\',
+    1 => \'AND qid = \',
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'_197\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'getAnsweredQuestion',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\question\\Question',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Question.php',
+      'line' => 175,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getAnsweredQuestion\'',
+        1 => '\'2016042913205306701\'',
+        2 => 'NULL',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getReward',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 1375,
+   \'header\' => 
+  array (
+    \'content-length\' => \'80\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'host\' => \'101.201.39.169:8992\',
+    \'connection\' => \'Keep-Alive\',
+    \'user-agent\' => \'Apache-HttpClient/UNAVAILABLE (java 1.4)\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getReward\',
+    \'path_info\' => \'/Question/getReward\',
+    \'request_time\' => 1462266521,
+    \'request_time_float\' => 1462266521.899822,
+    \'server_port\' => 8992,
+    \'remote_port\' => 36886,
+    \'remote_addr\' => \'123.120.230.5\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'question_id\' => \'2016042217460792342\',
+    \'reward_id\' => \'1461598124\',
+    \'user_id\' => \'2016042913205306701\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 1375,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-03 17:11:14
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \')
+    AND qid =\' at line 6',
+  'code' => '42000',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/question/Question.php',
+      'line' => 225,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Select::__set_state(array(
+   \'union\' => 
+  array (
+  ),
+   \'for_update\' => false,
+   \'cols\' => 
+  array (
+    \'rank\' => \'count(user_id)\',
+  ),
+   \'from\' => 
+  array (
+    0 => 
+    array (
+      0 => \'`90_user_answer`\',
+    ),
+  ),
+   \'from_key\' => 0,
+   \'group_by\' => 
+  array (
+  ),
+   \'having\' => 
+  array (
+  ),
+   \'page\' => 0,
+   \'paging\' => 10,
+   \'table_refs\' => 
+  array (
+    \'90_user_answer\' => \'FROM 90_user_answer\',
+  ),
+   \'bind_values\' => 
+  array (
+  ),
+   \'where\' => 
+  array (
+    0 => \'answer_time < (select answer_time from 90_user_answer where user_id = 2016042913205306701 and qid = )\',
+    1 => \'AND qid = \',
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'_201\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'getAnsweredQuestion',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\question\\Question',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Question.php',
+      'line' => 175,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getAnsweredQuestion\'',
+        1 => '\'2016042913205306701\'',
+        2 => 'NULL',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getReward',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 1384,
+   \'header\' => 
+  array (
+    \'content-length\' => \'80\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'host\' => \'101.201.39.169:8992\',
+    \'connection\' => \'Keep-Alive\',
+    \'user-agent\' => \'Apache-HttpClient/UNAVAILABLE (java 1.4)\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getReward\',
+    \'path_info\' => \'/Question/getReward\',
+    \'request_time\' => 1462266674,
+    \'request_time_float\' => 1462266674.078285,
+    \'server_port\' => 8992,
+    \'remote_port\' => 49859,
+    \'remote_addr\' => \'123.120.230.5\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'question_id\' => \'2016042217460792342\',
+    \'reward_id\' => \'1461598124\',
+    \'user_id\' => \'2016042913205306701\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 1384,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-03 17:11:14
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \')
+    AND qid =\' at line 6',
+  'code' => '42000',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/question/Question.php',
+      'line' => 225,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Select::__set_state(array(
+   \'union\' => 
+  array (
+  ),
+   \'for_update\' => false,
+   \'cols\' => 
+  array (
+    \'rank\' => \'count(user_id)\',
+  ),
+   \'from\' => 
+  array (
+    0 => 
+    array (
+      0 => \'`90_user_answer`\',
+    ),
+  ),
+   \'from_key\' => 0,
+   \'group_by\' => 
+  array (
+  ),
+   \'having\' => 
+  array (
+  ),
+   \'page\' => 0,
+   \'paging\' => 10,
+   \'table_refs\' => 
+  array (
+    \'90_user_answer\' => \'FROM 90_user_answer\',
+  ),
+   \'bind_values\' => 
+  array (
+  ),
+   \'where\' => 
+  array (
+    0 => \'answer_time < (select answer_time from 90_user_answer where user_id = 2016042913205306701 and qid = )\',
+    1 => \'AND qid = \',
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'_202\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'getAnsweredQuestion',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\question\\Question',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Question.php',
+      'line' => 175,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getAnsweredQuestion\'',
+        1 => '\'2016042913205306701\'',
+        2 => 'NULL',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getReward',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 1384,
+   \'header\' => 
+  array (
+    \'content-length\' => \'80\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'host\' => \'101.201.39.169:8992\',
+    \'connection\' => \'Keep-Alive\',
+    \'user-agent\' => \'Apache-HttpClient/UNAVAILABLE (java 1.4)\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getReward\',
+    \'path_info\' => \'/Question/getReward\',
+    \'request_time\' => 1462266674,
+    \'request_time_float\' => 1462266674.078285,
+    \'server_port\' => 8992,
+    \'remote_port\' => 49859,
+    \'remote_addr\' => \'123.120.230.5\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'question_id\' => \'2016042217460792342\',
+    \'reward_id\' => \'1461598124\',
+    \'user_id\' => \'2016042913205306701\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 1384,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-03 17:12:36
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \')
+    AND qid =\' at line 6',
+  'code' => '42000',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/question/Question.php',
+      'line' => 225,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Select::__set_state(array(
+   \'union\' => 
+  array (
+  ),
+   \'for_update\' => false,
+   \'cols\' => 
+  array (
+    \'rank\' => \'count(user_id)\',
+  ),
+   \'from\' => 
+  array (
+    0 => 
+    array (
+      0 => \'`90_user_answer`\',
+    ),
+  ),
+   \'from_key\' => 0,
+   \'group_by\' => 
+  array (
+  ),
+   \'having\' => 
+  array (
+  ),
+   \'page\' => 0,
+   \'paging\' => 10,
+   \'table_refs\' => 
+  array (
+    \'90_user_answer\' => \'FROM 90_user_answer\',
+  ),
+   \'bind_values\' => 
+  array (
+  ),
+   \'where\' => 
+  array (
+    0 => \'answer_time < (select answer_time from 90_user_answer where user_id = 2016042913205306701 and qid = )\',
+    1 => \'AND qid = \',
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'_206\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'getAnsweredQuestion',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\question\\Question',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Question.php',
+      'line' => 175,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getAnsweredQuestion\'',
+        1 => '\'2016042913205306701\'',
+        2 => 'NULL',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getReward',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 1393,
+   \'header\' => 
+  array (
+    \'content-length\' => \'80\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'host\' => \'101.201.39.169:8992\',
+    \'connection\' => \'Keep-Alive\',
+    \'user-agent\' => \'Apache-HttpClient/UNAVAILABLE (java 1.4)\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getReward\',
+    \'path_info\' => \'/Question/getReward\',
+    \'request_time\' => 1462266756,
+    \'request_time_float\' => 1462266756.3208799,
+    \'server_port\' => 8992,
+    \'remote_port\' => 47923,
+    \'remote_addr\' => \'123.120.230.5\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'question_id\' => \'2016042217460792342\',
+    \'reward_id\' => \'1461598124\',
+    \'user_id\' => \'2016042913205306701\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 1393,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-03 17:12:36
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \')
+    AND qid =\' at line 6',
+  'code' => '42000',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/question/Question.php',
+      'line' => 225,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Select::__set_state(array(
+   \'union\' => 
+  array (
+  ),
+   \'for_update\' => false,
+   \'cols\' => 
+  array (
+    \'rank\' => \'count(user_id)\',
+  ),
+   \'from\' => 
+  array (
+    0 => 
+    array (
+      0 => \'`90_user_answer`\',
+    ),
+  ),
+   \'from_key\' => 0,
+   \'group_by\' => 
+  array (
+  ),
+   \'having\' => 
+  array (
+  ),
+   \'page\' => 0,
+   \'paging\' => 10,
+   \'table_refs\' => 
+  array (
+    \'90_user_answer\' => \'FROM 90_user_answer\',
+  ),
+   \'bind_values\' => 
+  array (
+  ),
+   \'where\' => 
+  array (
+    0 => \'answer_time < (select answer_time from 90_user_answer where user_id = 2016042913205306701 and qid = )\',
+    1 => \'AND qid = \',
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'_207\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'getAnsweredQuestion',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\question\\Question',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Question.php',
+      'line' => 175,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getAnsweredQuestion\'',
+        1 => '\'2016042913205306701\'',
+        2 => 'NULL',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getReward',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 1393,
+   \'header\' => 
+  array (
+    \'content-length\' => \'80\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'host\' => \'101.201.39.169:8992\',
+    \'connection\' => \'Keep-Alive\',
+    \'user-agent\' => \'Apache-HttpClient/UNAVAILABLE (java 1.4)\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getReward\',
+    \'path_info\' => \'/Question/getReward\',
+    \'request_time\' => 1462266756,
+    \'request_time_float\' => 1462266756.3208799,
+    \'server_port\' => 8992,
+    \'remote_port\' => 47923,
+    \'remote_addr\' => \'123.120.230.5\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'question_id\' => \'2016042217460792342\',
+    \'reward_id\' => \'1461598124\',
+    \'user_id\' => \'2016042913205306701\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 1393,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-03 17:18:48
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \')
+    AND qid =\' at line 6',
+  'code' => '42000',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/question/Question.php',
+      'line' => 225,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Select::__set_state(array(
+   \'union\' => 
+  array (
+  ),
+   \'for_update\' => false,
+   \'cols\' => 
+  array (
+    \'rank\' => \'count(user_id)\',
+  ),
+   \'from\' => 
+  array (
+    0 => 
+    array (
+      0 => \'`90_user_answer`\',
+    ),
+  ),
+   \'from_key\' => 0,
+   \'group_by\' => 
+  array (
+  ),
+   \'having\' => 
+  array (
+  ),
+   \'page\' => 0,
+   \'paging\' => 10,
+   \'table_refs\' => 
+  array (
+    \'90_user_answer\' => \'FROM 90_user_answer\',
+  ),
+   \'bind_values\' => 
+  array (
+  ),
+   \'where\' => 
+  array (
+    0 => \'answer_time < (select answer_time from 90_user_answer where user_id = 2016042913205306701 and qid = )\',
+    1 => \'AND qid = \',
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'_512\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'getAnsweredQuestion',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\question\\Question',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Question.php',
+      'line' => 175,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getAnsweredQuestion\'',
+        1 => '\'2016042913205306701\'',
+        2 => 'NULL',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getReward',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 1402,
+   \'header\' => 
+  array (
+    \'content-length\' => \'80\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'host\' => \'101.201.39.169:8992\',
+    \'connection\' => \'Keep-Alive\',
+    \'user-agent\' => \'Apache-HttpClient/UNAVAILABLE (java 1.4)\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getReward\',
+    \'path_info\' => \'/Question/getReward\',
+    \'request_time\' => 1462267127,
+    \'request_time_float\' => 1462267128.2613361,
+    \'server_port\' => 8992,
+    \'remote_port\' => 34410,
+    \'remote_addr\' => \'123.120.230.5\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'question_id\' => \'2016042217460792342\',
+    \'reward_id\' => \'1461598124\',
+    \'user_id\' => \'2016042913205306701\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 1402,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-03 17:18:48
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \')
+    AND qid =\' at line 6',
+  'code' => '42000',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/question/Question.php',
+      'line' => 225,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Select::__set_state(array(
+   \'union\' => 
+  array (
+  ),
+   \'for_update\' => false,
+   \'cols\' => 
+  array (
+    \'rank\' => \'count(user_id)\',
+  ),
+   \'from\' => 
+  array (
+    0 => 
+    array (
+      0 => \'`90_user_answer`\',
+    ),
+  ),
+   \'from_key\' => 0,
+   \'group_by\' => 
+  array (
+  ),
+   \'having\' => 
+  array (
+  ),
+   \'page\' => 0,
+   \'paging\' => 10,
+   \'table_refs\' => 
+  array (
+    \'90_user_answer\' => \'FROM 90_user_answer\',
+  ),
+   \'bind_values\' => 
+  array (
+  ),
+   \'where\' => 
+  array (
+    0 => \'answer_time < (select answer_time from 90_user_answer where user_id = 2016042913205306701 and qid = )\',
+    1 => \'AND qid = \',
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'_513\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'getAnsweredQuestion',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\question\\Question',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Question.php',
+      'line' => 175,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getAnsweredQuestion\'',
+        1 => '\'2016042913205306701\'',
+        2 => 'NULL',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getReward',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 1402,
+   \'header\' => 
+  array (
+    \'content-length\' => \'80\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'host\' => \'101.201.39.169:8992\',
+    \'connection\' => \'Keep-Alive\',
+    \'user-agent\' => \'Apache-HttpClient/UNAVAILABLE (java 1.4)\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getReward\',
+    \'path_info\' => \'/Question/getReward\',
+    \'request_time\' => 1462267127,
+    \'request_time_float\' => 1462267128.2613361,
+    \'server_port\' => 8992,
+    \'remote_port\' => 34410,
+    \'remote_addr\' => \'123.120.230.5\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'question_id\' => \'2016042217460792342\',
+    \'reward_id\' => \'1461598124\',
+    \'user_id\' => \'2016042913205306701\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 1402,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-03 17:22:49
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \')
+    AND qid =\' at line 6',
+  'code' => '42000',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/question/Question.php',
+      'line' => 225,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Select::__set_state(array(
+   \'union\' => 
+  array (
+  ),
+   \'for_update\' => false,
+   \'cols\' => 
+  array (
+    \'rank\' => \'count(user_id)\',
+  ),
+   \'from\' => 
+  array (
+    0 => 
+    array (
+      0 => \'`90_user_answer`\',
+    ),
+  ),
+   \'from_key\' => 0,
+   \'group_by\' => 
+  array (
+  ),
+   \'having\' => 
+  array (
+  ),
+   \'page\' => 0,
+   \'paging\' => 10,
+   \'table_refs\' => 
+  array (
+    \'90_user_answer\' => \'FROM 90_user_answer\',
+  ),
+   \'bind_values\' => 
+  array (
+  ),
+   \'where\' => 
+  array (
+    0 => \'answer_time < (select answer_time from 90_user_answer where user_id = 2016042914465903072 and qid = )\',
+    1 => \'AND qid = \',
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'_136\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'getAnsweredQuestion',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\question\\Question',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Question.php',
+      'line' => 175,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getAnsweredQuestion\'',
+        1 => '\'2016042914465903072\'',
+        2 => 'NULL',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getReward',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 1419,
+   \'header\' => 
+  array (
+    \'host\' => \'101.201.39.169:8992\',
+    \'connection\' => \'keep-alive\',
+    \'content-length\' => \'380\',
+    \'cache-control\' => \'no-cache\',
+    \'origin\' => \'chrome-extension://eamjejhaaippfkenendcbcceckkhdfnh\',
+    \'content-type\' => \'multipart/form-data; boundary=----WebKitFormBoundarykR7LE8rQIjGBKHdG\',
+    \'user-agent\' => \'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\',
+    \'postman-token\' => \'8643d24c-03d1-069e-7afa-f56f0ec8aca7\',
+    \'accept\' => \'*/*\',
+    \'accept-encoding\' => \'gzip, deflate\',
+    \'accept-language\' => \'zh-CN,zh;q=0.8\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getReward\',
+    \'path_info\' => \'/Question/getReward\',
+    \'request_time\' => 1462267368,
+    \'request_time_float\' => 1462267369.3787949,
+    \'server_port\' => 8992,
+    \'remote_port\' => 62375,
+    \'remote_addr\' => \'123.120.230.5\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'files\' => 
+  array (
+  ),
+   \'post\' => 
+  array (
+    \'question_id\' => \'2016042217460792344\',
+    \'reward_id\' => \'1461598287\',
+    \'user_id\' => \'2016042914465903072\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 1419,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-03 17:34:29
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \')
+    AND qid =\' at line 6',
+  'code' => '42000',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/question/Question.php',
+      'line' => 225,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Select::__set_state(array(
+   \'union\' => 
+  array (
+  ),
+   \'for_update\' => false,
+   \'cols\' => 
+  array (
+    \'rank\' => \'count(user_id)\',
+  ),
+   \'from\' => 
+  array (
+    0 => 
+    array (
+      0 => \'`90_user_answer`\',
+    ),
+  ),
+   \'from_key\' => 0,
+   \'group_by\' => 
+  array (
+  ),
+   \'having\' => 
+  array (
+  ),
+   \'page\' => 0,
+   \'paging\' => 10,
+   \'table_refs\' => 
+  array (
+    \'90_user_answer\' => \'FROM 90_user_answer\',
+  ),
+   \'bind_values\' => 
+  array (
+  ),
+   \'where\' => 
+  array (
+    0 => \'answer_time < (select answer_time from 90_user_answer where user_id = 2016042913205306701 and qid = )\',
+    1 => \'AND qid = \',
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'_517\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'getAnsweredQuestion',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\question\\Question',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Question.php',
+      'line' => 175,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getAnsweredQuestion\'',
+        1 => '\'2016042913205306701\'',
+        2 => 'NULL',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getReward',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 1428,
+   \'header\' => 
+  array (
+    \'content-length\' => \'80\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'host\' => \'101.201.39.169:8992\',
+    \'connection\' => \'Keep-Alive\',
+    \'user-agent\' => \'Apache-HttpClient/UNAVAILABLE (java 1.4)\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getReward\',
+    \'path_info\' => \'/Question/getReward\',
+    \'request_time\' => 1462268069,
+    \'request_time_float\' => 1462268069.2968071,
+    \'server_port\' => 8992,
+    \'remote_port\' => 54009,
+    \'remote_addr\' => \'123.120.230.5\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'question_id\' => \'2016042217460792342\',
+    \'reward_id\' => \'1461598124\',
+    \'user_id\' => \'2016042913205306701\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 1428,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-03 17:34:29
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \')
+    AND qid =\' at line 6',
+  'code' => '42000',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/question/Question.php',
+      'line' => 225,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Select::__set_state(array(
+   \'union\' => 
+  array (
+  ),
+   \'for_update\' => false,
+   \'cols\' => 
+  array (
+    \'rank\' => \'count(user_id)\',
+  ),
+   \'from\' => 
+  array (
+    0 => 
+    array (
+      0 => \'`90_user_answer`\',
+    ),
+  ),
+   \'from_key\' => 0,
+   \'group_by\' => 
+  array (
+  ),
+   \'having\' => 
+  array (
+  ),
+   \'page\' => 0,
+   \'paging\' => 10,
+   \'table_refs\' => 
+  array (
+    \'90_user_answer\' => \'FROM 90_user_answer\',
+  ),
+   \'bind_values\' => 
+  array (
+  ),
+   \'where\' => 
+  array (
+    0 => \'answer_time < (select answer_time from 90_user_answer where user_id = 2016042913205306701 and qid = )\',
+    1 => \'AND qid = \',
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'_518\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'getAnsweredQuestion',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\question\\Question',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Question.php',
+      'line' => 175,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getAnsweredQuestion\'',
+        1 => '\'2016042913205306701\'',
+        2 => 'NULL',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getReward',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 1428,
+   \'header\' => 
+  array (
+    \'content-length\' => \'80\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'host\' => \'101.201.39.169:8992\',
+    \'connection\' => \'Keep-Alive\',
+    \'user-agent\' => \'Apache-HttpClient/UNAVAILABLE (java 1.4)\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getReward\',
+    \'path_info\' => \'/Question/getReward\',
+    \'request_time\' => 1462268069,
+    \'request_time_float\' => 1462268069.2968071,
+    \'server_port\' => 8992,
+    \'remote_port\' => 54009,
+    \'remote_addr\' => \'123.120.230.5\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'question_id\' => \'2016042217460792342\',
+    \'reward_id\' => \'1461598124\',
+    \'user_id\' => \'2016042913205306701\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 1428,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-03 17:51:15
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42S02]: Base table or view not found: 1146 Table \'90game.90_question_8\' doesn\'t exist',
+  'code' => '42S02',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+  \'_524_1_\' => \'2016042217460792342\',
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/question/Question.php',
+      'line' => 102,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Select::__set_state(array(
+   \'union\' => 
+  array (
+  ),
+   \'for_update\' => false,
+   \'cols\' => 
+  array (
+    0 => \'*\',
+    1 => \'(select count(user_id) from 90_user_answer where user_id = 2016042913395884655 and 90_user_answer.qid = 90_question_8.qid ) as is_answer\',
+  ),
+   \'from\' => 
+  array (
+    0 => 
+    array (
+      0 => \'`90_question_8`\',
+    ),
+  ),
+   \'from_key\' => 0,
+   \'group_by\' => 
+  array (
+  ),
+   \'having\' => 
+  array (
+  ),
+   \'page\' => 0,
+   \'paging\' => 10,
+   \'table_refs\' => 
+  array (
+    \'90_question_8\' => \'FROM 90_question_8\',
+  ),
+   \'bind_values\' => 
+  array (
+    \'_524_1_\' => \'2016042217460792342\',
+  ),
+   \'where\' => 
+  array (
+    0 => \'qid = :_524_1_\',
+  ),
+   \'order_by\' => 
+  array (
+    0 => \'serial desc\',
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'_524\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'getDetail',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\question\\Question',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Question.php',
+      'line' => 128,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getDetail\'',
+        1 => '\'2016042217460792342\'',
+        2 => '\'8\'',
+        3 => '\'2016042913395884655\'',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'detail',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 1430,
+   \'header\' => 
+  array (
+    \'host\' => \'101.201.39.169:8992\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'connection\' => \'keep-alive\',
+    \'accept\' => \'*/*\',
+    \'user-agent\' => \'NineZeroProject/1.0 (iPhone; iOS 9.3.1; Scale/2.00)\',
+    \'accept-language\' => \'en-CN;q=1, zh-Hans-CN;q=0.9\',
+    \'accept-encoding\' => \'gzip, deflate\',
+    \'content-length\' => \'69\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/detail\',
+    \'path_info\' => \'/Question/detail\',
+    \'request_time\' => 1462269074,
+    \'request_time_float\' => 1462269075.1178019,
+    \'server_port\' => 8992,
+    \'remote_port\' => 56037,
+    \'remote_addr\' => \'123.120.230.5\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'area_id\' => \'8\',
+    \'question_id\' => \'2016042217460792342\',
+    \'user_id\' => \'2016042913395884655\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 1430,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-03 18:33:47
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \')
+    AND qid =\' at line 6',
+  'code' => '42000',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/question/Question.php',
+      'line' => 225,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Select::__set_state(array(
+   \'union\' => 
+  array (
+  ),
+   \'for_update\' => false,
+   \'cols\' => 
+  array (
+    \'rank\' => \'count(user_id)\',
+  ),
+   \'from\' => 
+  array (
+    0 => 
+    array (
+      0 => \'`90_user_answer`\',
+    ),
+  ),
+   \'from_key\' => 0,
+   \'group_by\' => 
+  array (
+  ),
+   \'having\' => 
+  array (
+  ),
+   \'page\' => 0,
+   \'paging\' => 10,
+   \'table_refs\' => 
+  array (
+    \'90_user_answer\' => \'FROM 90_user_answer\',
+  ),
+   \'bind_values\' => 
+  array (
+  ),
+   \'where\' => 
+  array (
+    0 => \'answer_time < (select answer_time from 90_user_answer where user_id = 2016042913205306701 and qid = )\',
+    1 => \'AND qid = \',
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'_572\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'getAnsweredQuestion',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\question\\Question',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Question.php',
+      'line' => 175,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getAnsweredQuestion\'',
+        1 => '\'2016042913205306701\'',
+        2 => 'NULL',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getReward',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 1524,
+   \'header\' => 
+  array (
+    \'content-length\' => \'80\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'host\' => \'101.201.39.169:8992\',
+    \'connection\' => \'Keep-Alive\',
+    \'user-agent\' => \'Apache-HttpClient/UNAVAILABLE (java 1.4)\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getReward\',
+    \'path_info\' => \'/Question/getReward\',
+    \'request_time\' => 1462271627,
+    \'request_time_float\' => 1462271627.7415929,
+    \'server_port\' => 8992,
+    \'remote_port\' => 56573,
+    \'remote_addr\' => \'123.120.230.5\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'question_id\' => \'2016042217460792342\',
+    \'reward_id\' => \'1461598124\',
+    \'user_id\' => \'2016042913205306701\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 1524,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-03 18:33:47
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \')
+    AND qid =\' at line 6',
+  'code' => '42000',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/question/Question.php',
+      'line' => 225,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Select::__set_state(array(
+   \'union\' => 
+  array (
+  ),
+   \'for_update\' => false,
+   \'cols\' => 
+  array (
+    \'rank\' => \'count(user_id)\',
+  ),
+   \'from\' => 
+  array (
+    0 => 
+    array (
+      0 => \'`90_user_answer`\',
+    ),
+  ),
+   \'from_key\' => 0,
+   \'group_by\' => 
+  array (
+  ),
+   \'having\' => 
+  array (
+  ),
+   \'page\' => 0,
+   \'paging\' => 10,
+   \'table_refs\' => 
+  array (
+    \'90_user_answer\' => \'FROM 90_user_answer\',
+  ),
+   \'bind_values\' => 
+  array (
+  ),
+   \'where\' => 
+  array (
+    0 => \'answer_time < (select answer_time from 90_user_answer where user_id = 2016042913205306701 and qid = )\',
+    1 => \'AND qid = \',
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'_573\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'getAnsweredQuestion',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\question\\Question',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Question.php',
+      'line' => 175,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getAnsweredQuestion\'',
+        1 => '\'2016042913205306701\'',
+        2 => 'NULL',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getReward',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 1524,
+   \'header\' => 
+  array (
+    \'content-length\' => \'80\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'host\' => \'101.201.39.169:8992\',
+    \'connection\' => \'Keep-Alive\',
+    \'user-agent\' => \'Apache-HttpClient/UNAVAILABLE (java 1.4)\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getReward\',
+    \'path_info\' => \'/Question/getReward\',
+    \'request_time\' => 1462271627,
+    \'request_time_float\' => 1462271627.7415929,
+    \'server_port\' => 8992,
+    \'remote_port\' => 56573,
+    \'remote_addr\' => \'123.120.230.5\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'question_id\' => \'2016042217460792342\',
+    \'reward_id\' => \'1461598124\',
+    \'user_id\' => \'2016042913205306701\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 1524,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-03 20:46:13
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \')
+    AND qid =\' at line 6',
+  'code' => '42000',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/question/Question.php',
+      'line' => 225,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Select::__set_state(array(
+   \'union\' => 
+  array (
+  ),
+   \'for_update\' => false,
+   \'cols\' => 
+  array (
+    \'rank\' => \'count(user_id)\',
+  ),
+   \'from\' => 
+  array (
+    0 => 
+    array (
+      0 => \'`90_user_answer`\',
+    ),
+  ),
+   \'from_key\' => 0,
+   \'group_by\' => 
+  array (
+  ),
+   \'having\' => 
+  array (
+  ),
+   \'page\' => 0,
+   \'paging\' => 10,
+   \'table_refs\' => 
+  array (
+    \'90_user_answer\' => \'FROM 90_user_answer\',
+  ),
+   \'bind_values\' => 
+  array (
+  ),
+   \'where\' => 
+  array (
+    0 => \'answer_time < (select answer_time from 90_user_answer where user_id = 2016042914465903072 and qid = )\',
+    1 => \'AND qid = \',
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'_611\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'getAnsweredQuestion',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\question\\Question',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Question.php',
+      'line' => 175,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getAnsweredQuestion\'',
+        1 => '\'2016042914465903072\'',
+        2 => 'NULL',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getReward',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 1566,
+   \'header\' => 
+  array (
+    \'content-length\' => \'80\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'host\' => \'101.201.39.169:8992\',
+    \'connection\' => \'Keep-Alive\',
+    \'user-agent\' => \'Apache-HttpClient/UNAVAILABLE (java 1.4)\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getReward\',
+    \'path_info\' => \'/Question/getReward\',
+    \'request_time\' => 1462279573,
+    \'request_time_float\' => 1462279573.582247,
+    \'server_port\' => 8992,
+    \'remote_port\' => 58066,
+    \'remote_addr\' => \'123.120.230.5\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'question_id\' => \'2016042217460792342\',
+    \'reward_id\' => \'1461598124\',
+    \'user_id\' => \'2016042914465903072\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 1566,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-03 20:46:13
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \')
+    AND qid =\' at line 6',
+  'code' => '42000',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/question/Question.php',
+      'line' => 225,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Select::__set_state(array(
+   \'union\' => 
+  array (
+  ),
+   \'for_update\' => false,
+   \'cols\' => 
+  array (
+    \'rank\' => \'count(user_id)\',
+  ),
+   \'from\' => 
+  array (
+    0 => 
+    array (
+      0 => \'`90_user_answer`\',
+    ),
+  ),
+   \'from_key\' => 0,
+   \'group_by\' => 
+  array (
+  ),
+   \'having\' => 
+  array (
+  ),
+   \'page\' => 0,
+   \'paging\' => 10,
+   \'table_refs\' => 
+  array (
+    \'90_user_answer\' => \'FROM 90_user_answer\',
+  ),
+   \'bind_values\' => 
+  array (
+  ),
+   \'where\' => 
+  array (
+    0 => \'answer_time < (select answer_time from 90_user_answer where user_id = 2016042914465903072 and qid = )\',
+    1 => \'AND qid = \',
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'_612\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'getAnsweredQuestion',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\question\\Question',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Question.php',
+      'line' => 175,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getAnsweredQuestion\'',
+        1 => '\'2016042914465903072\'',
+        2 => 'NULL',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getReward',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 1566,
+   \'header\' => 
+  array (
+    \'content-length\' => \'80\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'host\' => \'101.201.39.169:8992\',
+    \'connection\' => \'Keep-Alive\',
+    \'user-agent\' => \'Apache-HttpClient/UNAVAILABLE (java 1.4)\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getReward\',
+    \'path_info\' => \'/Question/getReward\',
+    \'request_time\' => 1462279573,
+    \'request_time_float\' => 1462279573.582247,
+    \'server_port\' => 8992,
+    \'remote_port\' => 58066,
+    \'remote_addr\' => \'123.120.230.5\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'question_id\' => \'2016042217460792342\',
+    \'reward_id\' => \'1461598124\',
+    \'user_id\' => \'2016042914465903072\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 1566,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-03 22:22:30
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42S22]: Column not found: 1054 Unknown column \'notice_id\' in \'field list\'',
+  'code' => '42S22',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+  \'user_id\' => \'2016050322223070887\',
+  \'notice_id\' => \'2016050322223074524\',
+  \'time\' => 1462285350,
+  \'title\' => \'\',
+  \'content\' => \'这是你的第一枚金币，just keep it.\',
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/user/Info.php',
+      'line' => 423,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Insert::__set_state(array(
+   \'col_on_update_values\' => NULL,
+   \'into\' => \'90_user_answer\',
+   \'last_insert_id_names\' => 
+  array (
+  ),
+   \'row\' => 0,
+   \'col_values_bulk\' => 
+  array (
+  ),
+   \'bind_values_bulk\' => 
+  array (
+  ),
+   \'col_order\' => 
+  array (
+  ),
+   \'col_values\' => 
+  array (
+    \'`user_id`\' => \':user_id\',
+    \'`notice_id`\' => \':notice_id\',
+    \'`time`\' => \':time\',
+    \'`title`\' => \':title\',
+    \'`content`\' => \':content\',
+  ),
+   \'returning\' => 
+  array (
+  ),
+   \'bind_values\' => 
+  array (
+    \'user_id\' => \'2016050322223070887\',
+    \'notice_id\' => \'2016050322223074524\',
+    \'time\' => 1462285350,
+    \'title\' => \'\',
+    \'content\' => \'这是你的第一枚金币，just keep it.\',
+  ),
+   \'where\' => 
+  array (
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'sendNotice',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\user\\Info',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Login.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'sendNotice\'',
+        1 => '\'这是你的第一枚金币，just keep it.\'',
+        2 => '\'\'',
+        3 => '1462285350',
+        4 => '\'2016050322223070887\'',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'register',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Login',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 57,
+   \'header\' => 
+  array (
+    \'host\' => \'101.201.39.169:8992\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'connection\' => \'keep-alive\',
+    \'accept\' => \'*/*\',
+    \'user-agent\' => \'NineZeroProject/1.0 (iPhone; iOS 9.3.1; Scale/2.00)\',
+    \'accept-language\' => \'en-CN;q=1, zh-Hans-CN;q=0.9\',
+    \'accept-encoding\' => \'gzip, deflate\',
+    \'content-length\' => \'171\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Login/register/\',
+    \'path_info\' => \'/Login/register/\',
+    \'request_time\' => 1462285349,
+    \'request_time_float\' => 1462285350.439054,
+    \'server_port\' => 8992,
+    \'remote_port\' => 58637,
+    \'remote_addr\' => \'123.120.230.5\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'code\' => \'4408\',
+    \'user_area_id\' => \'010\',
+    \'user_avatar\' => \'\',
+    \'user_email\' => \'null\',
+    \'user_mobile\' => \'15510774602\',
+    \'user_name\' => \'tt\',
+    \'user_password\' => \'93c5e11163115bf24b34cf26414cbc88ff81c278ed04330c10d1bc262bd4f477\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 57,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-03 22:37:01
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[42S22]: Column not found: 1054 Unknown column \'notice_id\' in \'field list\'',
+  'code' => '42S22',
+  'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+  'line' => 67,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 67,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'array (
+  \'user_id\' => \'2016050322370153410\',
+  \'notice_id\' => \'2016050322370154032\',
+  \'time\' => 1462286221,
+  \'title\' => \'\',
+  \'content\' => \'这是你的第一枚金币，just keep it.\',
+)',
+      ),
+      'class' => 'PDOStatement',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/user/Info.php',
+      'line' => 423,
+      'function' => 'execute',
+      'args' => 
+      array (
+        0 => 'Aura\\SqlQuery\\Mysql\\Insert::__set_state(array(
+   \'col_on_update_values\' => NULL,
+   \'into\' => \'90_user_answer\',
+   \'last_insert_id_names\' => 
+  array (
+  ),
+   \'row\' => 0,
+   \'col_values_bulk\' => 
+  array (
+  ),
+   \'bind_values_bulk\' => 
+  array (
+  ),
+   \'col_order\' => 
+  array (
+  ),
+   \'col_values\' => 
+  array (
+    \'`user_id`\' => \':user_id\',
+    \'`notice_id`\' => \':notice_id\',
+    \'`time`\' => \':time\',
+    \'`title`\' => \':title\',
+    \'`content`\' => \':content\',
+  ),
+   \'returning\' => 
+  array (
+  ),
+   \'bind_values\' => 
+  array (
+    \'user_id\' => \'2016050322370153410\',
+    \'notice_id\' => \'2016050322370154032\',
+    \'time\' => 1462286221,
+    \'title\' => \'\',
+    \'content\' => \'这是你的第一枚金币，just keep it.\',
+  ),
+   \'where\' => 
+  array (
+  ),
+   \'order_by\' => 
+  array (
+  ),
+   \'limit\' => 0,
+   \'offset\' => 0,
+   \'flags\' => 
+  array (
+  ),
+   \'quoter\' => 
+  Aura\\SqlQuery\\Quoter::__set_state(array(
+     \'quote_name_prefix\' => \'`\',
+     \'quote_name_suffix\' => \'`\',
+  )),
+   \'seq_bind_prefix\' => \'_1\',
+))',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/dao/BaseDao.php',
+      'line' => 44,
+      'function' => 'sendNotice',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\user\\Info',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/ctrl/Login.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'sendNotice\'',
+        1 => '\'这是你的第一枚金币，just keep it.\'',
+        2 => '\'\'',
+        3 => '1462286221',
+        4 => '\'2016050322370153410\'',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'register',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Login',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps/90server/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    6 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 85,
+   \'header\' => 
+  array (
+    \'host\' => \'101.201.39.169:8992\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+    \'connection\' => \'keep-alive\',
+    \'accept\' => \'*/*\',
+    \'user-agent\' => \'NineZeroProject/1.0 (iPhone; iOS 9.3.1; Scale/2.00)\',
+    \'accept-language\' => \'zh-Hans-CN;q=1\',
+    \'accept-encoding\' => \'gzip, deflate\',
+    \'content-length\' => \'187\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Login/register/\',
+    \'path_info\' => \'/Login/register/\',
+    \'request_time\' => 1462286220,
+    \'request_time_float\' => 1462286221.684025,
+    \'server_port\' => 8992,
+    \'remote_port\' => 51391,
+    \'remote_addr\' => \'123.120.230.5\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'code\' => \'6603\',
+    \'user_area_id\' => \'010\',
+    \'user_avatar\' => \'\',
+    \'user_email\' => \'null\',
+    \'user_mobile\' => \'18612484575\',
+    \'user_name\' => \'白鸦\',
+    \'user_password\' => \'cc2c631d0d05826b5317bac33253ea171da436481e24426dca8c906fd27f699b\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 85,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    8 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps/90server/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps/90server/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps/90server/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)

@@ -1,0 +1,1976 @@
+2016-05-28 20:02:31
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[HY000] [1049] Unknown database \'90game_test\'',
+  'code' => 1049,
+  'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+  'line' => 69,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 69,
+      'function' => '__construct',
+      'args' => 
+      array (
+        0 => '\'mysql:host=localhost;port=3306;dbname=90game_test\'',
+        1 => '\'root\'',
+        2 => '\'123456\'',
+        3 => 'array (
+  1002 => \'SET NAMES \\\'UTF8\\\';\',
+  3 => 2,
+  12 => 1,
+)',
+      ),
+      'class' => 'PDO',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 57,
+      'function' => 'connect',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 51,
+      'function' => 'checkPing',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/dao/BaseDao.php',
+      'line' => 113,
+      'function' => '__construct',
+      'args' => 
+      array (
+        0 => 'array (
+  \'dsn\' => \'mysql:host=localhost;port=3306;dbname=90game_test\',
+  \'name\' => \'90game_test\',
+  \'user\' => \'root\',
+  \'pass\' => \'123456\',
+  \'dbname\' => \'90game_test\',
+  \'charset\' => \'UTF8\',
+  \'pconnect\' => true,
+  \'ping\' => 1,
+  \'pingtime\' => 3600,
+)',
+        1 => 'NULL',
+        2 => '\'90game_test\'',
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/dao/BaseDao.php',
+      'line' => 39,
+      'function' => 'getConnection',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/ctrl/Question.php',
+      'line' => 93,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getList\'',
+        1 => 'NULL',
+        2 => 'NULL',
+        3 => '\'010\'',
+        4 => '0',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    6 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getList',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    8 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 2,
+   \'header\' => 
+  array (
+    \'host\' => \'101.201.39.169:5290\',
+    \'connection\' => \'keep-alive\',
+    \'accept\' => \'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\',
+    \'upgrade-insecure-requests\' => \'1\',
+    \'user-agent\' => \'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36\',
+    \'accept-encoding\' => \'gzip, deflate, sdch\',
+    \'accept-language\' => \'zh-CN,zh;q=0.8,en;q=0.6,it;q=0.4,ja;q=0.2,zh-TW;q=0.2\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'GET\',
+    \'request_uri\' => \'/Question/getList\',
+    \'path_info\' => \'/Question/getList\',
+    \'request_time\' => 1464436951,
+    \'request_time_float\' => 1464436951.4867001,
+    \'server_port\' => 5290,
+    \'remote_port\' => 60862,
+    \'remote_addr\' => \'114.254.100.33\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 2,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    11 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    12 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps_test/90server_test/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-28 20:05:10
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[HY000] [1049] Unknown database \'90game_test\'',
+  'code' => 1049,
+  'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+  'line' => 69,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 69,
+      'function' => '__construct',
+      'args' => 
+      array (
+        0 => '\'mysql:host=localhost;port=3306;dbname=90game_test\'',
+        1 => '\'root\'',
+        2 => '\'123456\'',
+        3 => 'array (
+  1002 => \'SET NAMES \\\'UTF8\\\';\',
+  3 => 2,
+  12 => 1,
+)',
+      ),
+      'class' => 'PDO',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 57,
+      'function' => 'connect',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 51,
+      'function' => 'checkPing',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/dao/BaseDao.php',
+      'line' => 113,
+      'function' => '__construct',
+      'args' => 
+      array (
+        0 => 'array (
+  \'dsn\' => \'mysql:host=localhost;port=3306;dbname=90game_test\',
+  \'name\' => \'90game_test\',
+  \'user\' => \'root\',
+  \'pass\' => \'123456\',
+  \'dbname\' => \'90game_test\',
+  \'charset\' => \'UTF8\',
+  \'pconnect\' => true,
+  \'ping\' => 1,
+  \'pingtime\' => 3600,
+)',
+        1 => 'NULL',
+        2 => '\'90game_test\'',
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/dao/BaseDao.php',
+      'line' => 39,
+      'function' => 'getConnection',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/ctrl/Question.php',
+      'line' => 93,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getList\'',
+        1 => 'NULL',
+        2 => 'NULL',
+        3 => '\'010\'',
+        4 => '0',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    6 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getList',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    8 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 2,
+   \'header\' => 
+  array (
+    \'host\' => \'101.201.39.169:5290\',
+    \'connection\' => \'keep-alive\',
+    \'accept\' => \'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\',
+    \'upgrade-insecure-requests\' => \'1\',
+    \'user-agent\' => \'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36\',
+    \'accept-encoding\' => \'gzip, deflate, sdch\',
+    \'accept-language\' => \'zh-CN,zh;q=0.8,en;q=0.6,it;q=0.4,ja;q=0.2,zh-TW;q=0.2\',
+  ),
+   \'server\' => 
+  array (
+    \'query_string\' => \'area_id=010&page=1&count=10\',
+    \'request_method\' => \'GET\',
+    \'request_uri\' => \'/Question/getList\',
+    \'path_info\' => \'/Question/getList\',
+    \'request_time\' => 1464437110,
+    \'request_time_float\' => 1464437110.4038,
+    \'server_port\' => 5290,
+    \'remote_port\' => 60862,
+    \'remote_addr\' => \'114.254.100.33\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'get\' => 
+  array (
+    \'area_id\' => \'010\',
+    \'page\' => \'1\',
+    \'count\' => \'10\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 2,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    11 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    12 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps_test/90server_test/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-28 20:07:13
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[HY000] [1049] Unknown database \'90game_test\'',
+  'code' => 1049,
+  'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+  'line' => 69,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 69,
+      'function' => '__construct',
+      'args' => 
+      array (
+        0 => '\'mysql:host=localhost;port=3306;dbname=90game_test\'',
+        1 => '\'root\'',
+        2 => '\'123456\'',
+        3 => 'array (
+  1002 => \'SET NAMES \\\'UTF8\\\';\',
+  3 => 2,
+  12 => 1,
+)',
+      ),
+      'class' => 'PDO',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 57,
+      'function' => 'connect',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 51,
+      'function' => 'checkPing',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/dao/BaseDao.php',
+      'line' => 113,
+      'function' => '__construct',
+      'args' => 
+      array (
+        0 => 'array (
+  \'dsn\' => \'mysql:host=localhost;port=3306;dbname=90game_test\',
+  \'name\' => \'90game_test\',
+  \'user\' => \'root\',
+  \'pass\' => \'123456\',
+  \'dbname\' => \'90game_test\',
+  \'charset\' => \'UTF8\',
+  \'pconnect\' => true,
+  \'ping\' => 1,
+  \'pingtime\' => 3600,
+)',
+        1 => 'NULL',
+        2 => '\'90game_test\'',
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/dao/BaseDao.php',
+      'line' => 39,
+      'function' => 'getConnection',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/ctrl/Question.php',
+      'line' => 93,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getList\'',
+        1 => '\'0\'',
+        2 => '\'100\'',
+        3 => '\'010\'',
+        4 => '0',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    6 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getList',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    8 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 17,
+   \'header\' => 
+  array (
+    \'host\' => \'101.201.39.169:5290\',
+    \'connection\' => \'keep-alive\',
+    \'content-length\' => \'328\',
+    \'cache-control\' => \'no-cache\',
+    \'origin\' => \'chrome-extension://eamjejhaaippfkenendcbcceckkhdfnh\',
+    \'content-type\' => \'multipart/form-data; boundary=----WebKitFormBoundarynBA6l202k6gmHECg\',
+    \'user-agent\' => \'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36\',
+    \'postman-token\' => \'59069bdf-25e9-a307-c258-f1f2260faeff\',
+    \'accept\' => \'*/*\',
+    \'accept-encoding\' => \'gzip, deflate\',
+    \'accept-language\' => \'zh-CN,zh;q=0.8\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getList\',
+    \'path_info\' => \'/Question/getList\',
+    \'request_time\' => 1464437233,
+    \'request_time_float\' => 1464437233.9059711,
+    \'server_port\' => 5290,
+    \'remote_port\' => 64611,
+    \'remote_addr\' => \'114.254.100.33\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'files\' => 
+  array (
+  ),
+   \'post\' => 
+  array (
+    \'area_id\' => \'010\',
+    \'page\' => \'0\',
+    \'count\' => \'100\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 17,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    11 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    12 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps_test/90server_test/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-28 20:07:24
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[HY000] [1049] Unknown database \'90game_test\'',
+  'code' => 1049,
+  'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+  'line' => 69,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 69,
+      'function' => '__construct',
+      'args' => 
+      array (
+        0 => '\'mysql:host=localhost;port=3306;dbname=90game_test\'',
+        1 => '\'root\'',
+        2 => '\'123456\'',
+        3 => 'array (
+  1002 => \'SET NAMES \\\'UTF8\\\';\',
+  3 => 2,
+  12 => 1,
+)',
+      ),
+      'class' => 'PDO',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 57,
+      'function' => 'connect',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 51,
+      'function' => 'checkPing',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/dao/BaseDao.php',
+      'line' => 113,
+      'function' => '__construct',
+      'args' => 
+      array (
+        0 => 'array (
+  \'dsn\' => \'mysql:host=localhost;port=3306;dbname=90game_test\',
+  \'name\' => \'90game_test\',
+  \'user\' => \'root\',
+  \'pass\' => \'123456\',
+  \'dbname\' => \'90game_test\',
+  \'charset\' => \'UTF8\',
+  \'pconnect\' => true,
+  \'ping\' => 1,
+  \'pingtime\' => 3600,
+)',
+        1 => 'NULL',
+        2 => '\'90game_test\'',
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/dao/BaseDao.php',
+      'line' => 39,
+      'function' => 'getConnection',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/ctrl/Question.php',
+      'line' => 93,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getList\'',
+        1 => '\'0\'',
+        2 => '\'90\'',
+        3 => '\'010\'',
+        4 => '0',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    6 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getList',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    8 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 17,
+   \'header\' => 
+  array (
+    \'host\' => \'101.201.39.169:5290\',
+    \'connection\' => \'keep-alive\',
+    \'content-length\' => \'327\',
+    \'cache-control\' => \'no-cache\',
+    \'origin\' => \'chrome-extension://eamjejhaaippfkenendcbcceckkhdfnh\',
+    \'content-type\' => \'multipart/form-data; boundary=----WebKitFormBoundary3L1v9hDYcWnmtARm\',
+    \'user-agent\' => \'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36\',
+    \'postman-token\' => \'d80f1afb-4575-e71f-cc54-37894c49b043\',
+    \'accept\' => \'*/*\',
+    \'accept-encoding\' => \'gzip, deflate\',
+    \'accept-language\' => \'zh-CN,zh;q=0.8\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getList\',
+    \'path_info\' => \'/Question/getList\',
+    \'request_time\' => 1464437243,
+    \'request_time_float\' => 1464437244.4276259,
+    \'server_port\' => 5290,
+    \'remote_port\' => 64611,
+    \'remote_addr\' => \'114.254.100.33\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'files\' => 
+  array (
+  ),
+   \'post\' => 
+  array (
+    \'area_id\' => \'010\',
+    \'page\' => \'0\',
+    \'count\' => \'90\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 17,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    11 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    12 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps_test/90server_test/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-28 20:10:19
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[HY000] [1049] Unknown database \'90game_test\'',
+  'code' => 1049,
+  'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+  'line' => 69,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 69,
+      'function' => '__construct',
+      'args' => 
+      array (
+        0 => '\'mysql:host=localhost;port=3306;dbname=90game_test\'',
+        1 => '\'root\'',
+        2 => '\'123456\'',
+        3 => 'array (
+  1002 => \'SET NAMES \\\'UTF8\\\';\',
+  3 => 2,
+  12 => 1,
+)',
+      ),
+      'class' => 'PDO',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 57,
+      'function' => 'connect',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 51,
+      'function' => 'checkPing',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/dao/BaseDao.php',
+      'line' => 113,
+      'function' => '__construct',
+      'args' => 
+      array (
+        0 => 'array (
+  \'dsn\' => \'mysql:host=localhost;port=3306;dbname=90game_test\',
+  \'name\' => \'90game_test\',
+  \'user\' => \'root\',
+  \'pass\' => \'123456\',
+  \'dbname\' => \'90game_test\',
+  \'charset\' => \'UTF8\',
+  \'pconnect\' => true,
+  \'ping\' => 1,
+  \'pingtime\' => 3600,
+)',
+        1 => 'NULL',
+        2 => '\'90game_test\'',
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/dao/BaseDao.php',
+      'line' => 39,
+      'function' => 'getConnection',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/ctrl/Question.php',
+      'line' => 93,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getList\'',
+        1 => 'NULL',
+        2 => 'NULL',
+        3 => '\'010\'',
+        4 => '0',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    6 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getList',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    8 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 2,
+   \'header\' => 
+  array (
+    \'host\' => \'101.201.39.169:5290\',
+    \'user-agent\' => \'curl/7.43.0\',
+    \'accept\' => \'*/*\',
+    \'content-length\' => \'42\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getList\',
+    \'path_info\' => \'/Question/getList\',
+    \'request_time\' => 1464437418,
+    \'request_time_float\' => 1464437419.4586179,
+    \'server_port\' => 5290,
+    \'remote_port\' => 60947,
+    \'remote_addr\' => \'114.254.100.33\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'{"area_id":_"010",_"page":_1,_"count":_10}\' => \'\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 2,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    11 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    12 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps_test/90server_test/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-28 20:10:43
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[HY000] [1049] Unknown database \'90game_test\'',
+  'code' => 1049,
+  'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+  'line' => 69,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 69,
+      'function' => '__construct',
+      'args' => 
+      array (
+        0 => '\'mysql:host=localhost;port=3306;dbname=90game_test\'',
+        1 => '\'root\'',
+        2 => '\'123456\'',
+        3 => 'array (
+  1002 => \'SET NAMES \\\'UTF8\\\';\',
+  3 => 2,
+  12 => 1,
+)',
+      ),
+      'class' => 'PDO',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 57,
+      'function' => 'connect',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 51,
+      'function' => 'checkPing',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/dao/BaseDao.php',
+      'line' => 113,
+      'function' => '__construct',
+      'args' => 
+      array (
+        0 => 'array (
+  \'dsn\' => \'mysql:host=localhost;port=3306;dbname=90game_test\',
+  \'name\' => \'90game_test\',
+  \'user\' => \'root\',
+  \'pass\' => \'123456\',
+  \'dbname\' => \'90game_test\',
+  \'charset\' => \'UTF8\',
+  \'pconnect\' => true,
+  \'ping\' => 1,
+  \'pingtime\' => 3600,
+)',
+        1 => 'NULL',
+        2 => '\'90game_test\'',
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/dao/BaseDao.php',
+      'line' => 39,
+      'function' => 'getConnection',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/ctrl/Question.php',
+      'line' => 93,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getList\'',
+        1 => '\'0\'',
+        2 => '\'90\'',
+        3 => '\'010\'',
+        4 => '0',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    6 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getList',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    8 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 3,
+   \'header\' => 
+  array (
+    \'host\' => \'101.201.39.169:5290\',
+    \'connection\' => \'keep-alive\',
+    \'content-length\' => \'327\',
+    \'cache-control\' => \'no-cache\',
+    \'origin\' => \'chrome-extension://eamjejhaaippfkenendcbcceckkhdfnh\',
+    \'content-type\' => \'multipart/form-data; boundary=----WebKitFormBoundaryBAjAKopzb3ORfRZv\',
+    \'user-agent\' => \'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36\',
+    \'postman-token\' => \'54e0b10a-f602-cdcb-2d41-b90e6e66d0ae\',
+    \'accept\' => \'*/*\',
+    \'accept-encoding\' => \'gzip, deflate\',
+    \'accept-language\' => \'zh-CN,zh;q=0.8\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getList\',
+    \'path_info\' => \'/Question/getList\',
+    \'request_time\' => 1464437443,
+    \'request_time_float\' => 1464437443.0886419,
+    \'server_port\' => 5290,
+    \'remote_port\' => 50029,
+    \'remote_addr\' => \'114.254.100.33\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'files\' => 
+  array (
+  ),
+   \'post\' => 
+  array (
+    \'area_id\' => \'010\',
+    \'page\' => \'0\',
+    \'count\' => \'90\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 3,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    11 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    12 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps_test/90server_test/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-28 20:10:49
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[HY000] [1049] Unknown database \'90game_test\'',
+  'code' => 1049,
+  'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+  'line' => 69,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 69,
+      'function' => '__construct',
+      'args' => 
+      array (
+        0 => '\'mysql:host=localhost;port=3306;dbname=90game_test\'',
+        1 => '\'root\'',
+        2 => '\'123456\'',
+        3 => 'array (
+  1002 => \'SET NAMES \\\'UTF8\\\';\',
+  3 => 2,
+  12 => 1,
+)',
+      ),
+      'class' => 'PDO',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 57,
+      'function' => 'connect',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 51,
+      'function' => 'checkPing',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/dao/BaseDao.php',
+      'line' => 113,
+      'function' => '__construct',
+      'args' => 
+      array (
+        0 => 'array (
+  \'dsn\' => \'mysql:host=localhost;port=3306;dbname=90game_test\',
+  \'name\' => \'90game_test\',
+  \'user\' => \'root\',
+  \'pass\' => \'123456\',
+  \'dbname\' => \'90game_test\',
+  \'charset\' => \'UTF8\',
+  \'pconnect\' => true,
+  \'ping\' => 1,
+  \'pingtime\' => 3600,
+)',
+        1 => 'NULL',
+        2 => '\'90game_test\'',
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/dao/BaseDao.php',
+      'line' => 39,
+      'function' => 'getConnection',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/ctrl/Question.php',
+      'line' => 93,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getList\'',
+        1 => '\'0\'',
+        2 => '\'90\'',
+        3 => '\'010\'',
+        4 => '0',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    6 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getList',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    8 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 3,
+   \'header\' => 
+  array (
+    \'host\' => \'101.201.39.169:5290\',
+    \'connection\' => \'keep-alive\',
+    \'content-length\' => \'327\',
+    \'cache-control\' => \'no-cache\',
+    \'origin\' => \'chrome-extension://eamjejhaaippfkenendcbcceckkhdfnh\',
+    \'content-type\' => \'multipart/form-data; boundary=----WebKitFormBoundaryamP8bbrWLOPxRzLR\',
+    \'user-agent\' => \'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36\',
+    \'postman-token\' => \'98b565a8-15c5-075c-54c0-1d52e6416e66\',
+    \'accept\' => \'*/*\',
+    \'accept-encoding\' => \'gzip, deflate\',
+    \'accept-language\' => \'zh-CN,zh;q=0.8\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getList\',
+    \'path_info\' => \'/Question/getList\',
+    \'request_time\' => 1464437449,
+    \'request_time_float\' => 1464437449.2456701,
+    \'server_port\' => 5290,
+    \'remote_port\' => 50029,
+    \'remote_addr\' => \'114.254.100.33\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'files\' => 
+  array (
+  ),
+   \'post\' => 
+  array (
+    \'area_id\' => \'010\',
+    \'page\' => \'0\',
+    \'count\' => \'90\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 3,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    11 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    12 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps_test/90server_test/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-28 20:16:23
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[HY000] [1049] Unknown database \'90game_test\'',
+  'code' => 1049,
+  'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+  'line' => 69,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 69,
+      'function' => '__construct',
+      'args' => 
+      array (
+        0 => '\'mysql:host=localhost;port=3306;dbname=90game_test\'',
+        1 => '\'root\'',
+        2 => '\'123456\'',
+        3 => 'array (
+  1002 => \'SET NAMES \\\'UTF8\\\';\',
+  3 => 2,
+  12 => 1,
+)',
+      ),
+      'class' => 'PDO',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 57,
+      'function' => 'connect',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 51,
+      'function' => 'checkPing',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/dao/BaseDao.php',
+      'line' => 113,
+      'function' => '__construct',
+      'args' => 
+      array (
+        0 => 'array (
+  \'dsn\' => \'mysql:host=localhost;port=3306;dbname=90game_test\',
+  \'name\' => \'90game_test\',
+  \'user\' => \'root\',
+  \'pass\' => \'123456\',
+  \'dbname\' => \'90game_test\',
+  \'charset\' => \'UTF8\',
+  \'pconnect\' => true,
+  \'ping\' => 1,
+  \'pingtime\' => 3600,
+)',
+        1 => 'NULL',
+        2 => '\'90game_test\'',
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/dao/BaseDao.php',
+      'line' => 39,
+      'function' => 'getConnection',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/ctrl/Question.php',
+      'line' => 93,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getList\'',
+        1 => 'NULL',
+        2 => 'NULL',
+        3 => '\'010\'',
+        4 => '0',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    6 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getList',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    8 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 1,
+   \'header\' => 
+  array (
+    \'host\' => \'101.201.39.169:5290\',
+    \'user-agent\' => \'curl/7.43.0\',
+    \'accept\' => \'*/*\',
+    \'content-length\' => \'42\',
+    \'content-type\' => \'application/x-www-form-urlencoded\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getList\',
+    \'path_info\' => \'/Question/getList\',
+    \'request_time\' => 1464437782,
+    \'request_time_float\' => 1464437783.071775,
+    \'server_port\' => 5290,
+    \'remote_port\' => 61254,
+    \'remote_addr\' => \'114.254.100.33\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'post\' => 
+  array (
+    \'{"area_id":_"010",_"page":_1,_"count":_10}\' => \'\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 1,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    11 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    12 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps_test/90server_test/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
+2016-05-28 21:56:35
+array (
+  'className' => 'Exception',
+  'message' => 'SQLSTATE[HY000] [1049] Unknown database \'90game_test\'',
+  'code' => 1049,
+  'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+  'line' => 69,
+  'userAgent' => '',
+  'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 69,
+      'function' => '__construct',
+      'args' => 
+      array (
+        0 => '\'mysql:host=localhost;port=3306;dbname=90game_test\'',
+        1 => '\'root\'',
+        2 => '\'123456\'',
+        3 => 'array (
+  1002 => \'SET NAMES \\\'UTF8\\\';\',
+  3 => 2,
+  12 => 1,
+)',
+      ),
+      'class' => 'PDO',
+      'type' => '->',
+    ),
+    1 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 57,
+      'function' => 'connect',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    2 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Db/Pdo.php',
+      'line' => 51,
+      'function' => 'checkPing',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    3 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/dao/BaseDao.php',
+      'line' => 113,
+      'function' => '__construct',
+      'args' => 
+      array (
+        0 => 'array (
+  \'dsn\' => \'mysql:host=localhost;port=3306;dbname=90game_test\',
+  \'name\' => \'90game_test\',
+  \'user\' => \'root\',
+  \'pass\' => \'123456\',
+  \'dbname\' => \'90game_test\',
+  \'charset\' => \'UTF8\',
+  \'pconnect\' => true,
+  \'ping\' => 1,
+  \'pingtime\' => 3600,
+)',
+        1 => 'NULL',
+        2 => '\'90game_test\'',
+      ),
+      'class' => 'ZPHP\\Db\\Pdo',
+      'type' => '->',
+    ),
+    4 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/dao/BaseDao.php',
+      'line' => 39,
+      'function' => 'getConnection',
+      'args' => 
+      array (
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    5 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/ctrl/Question.php',
+      'line' => 93,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'getList\'',
+        1 => '\'1\'',
+        2 => '\'10\'',
+        3 => '\'010\'',
+        4 => '0',
+      ),
+      'class' => 'dao\\BaseDao',
+      'type' => '->',
+    ),
+    6 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Core/Route.php',
+      'line' => 33,
+      'function' => 'getList',
+      'args' => 
+      array (
+      ),
+      'class' => 'ctrl\\Question',
+      'type' => '->',
+    ),
+    7 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/apps/socket/HttpServer.php',
+      'line' => 53,
+      'function' => 'route',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Core\\Route',
+      'type' => '::',
+    ),
+    8 => 
+    array (
+      'file' => 'null',
+      'line' => 'null',
+      'function' => 'onRequest',
+      'args' => 
+      array (
+        0 => 'swoole_http_request::__set_state(array(
+   \'fd\' => 2,
+   \'header\' => 
+  array (
+    \'host\' => \'101.201.39.169:5290\',
+    \'user-agent\' => \'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36\',
+    \'content-length\' => \'327\',
+    \'accept\' => \'*/*\',
+    \'accept-encoding\' => \'gzip, deflate\',
+    \'accept-language\' => \'zh-CN,zh;q=0.8,en;q=0.6,it;q=0.4,ja;q=0.2,zh-TW;q=0.2\',
+    \'cache-control\' => \'no-cache\',
+    \'content-type\' => \'multipart/form-data; boundary=----WebKitFormBoundaryBZQVxpOqSQboINtZ\',
+    \'origin\' => \'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop\',
+    \'postman-token\' => \'c96a5c5c-a38f-7184-b566-33b19d3d2941\',
+    \'x-lantern-auth-token\' => \'Oc5JdM4GAm2VeC4zXHOqkfIv7ZIJt92RjEJw7GrBPEdxAorD33DItVp5F39iEHQT\',
+    \'x-lantern-device-id\' => \'rLwyfA99\',
+  ),
+   \'server\' => 
+  array (
+    \'request_method\' => \'POST\',
+    \'request_uri\' => \'/Question/getList\',
+    \'path_info\' => \'/Question/getList\',
+    \'request_time\' => 1464443795,
+    \'request_time_float\' => 1464443795.16995,
+    \'server_port\' => 5290,
+    \'remote_port\' => 2390,
+    \'remote_addr\' => \'125.39.145.2\',
+    \'server_protocol\' => \'HTTP/1.1\',
+    \'server_software\' => \'swoole-http-server\',
+  ),
+   \'files\' => 
+  array (
+  ),
+   \'post\' => 
+  array (
+    \'area_id\' => \'010\',
+    \'page\' => \'1\',
+    \'count\' => \'10\',
+  ),
+))',
+        1 => 'swoole_http_response::__set_state(array(
+   \'fd\' => 2,
+))',
+      ),
+      'class' => 'socket\\HttpServer',
+      'type' => '->',
+    ),
+    9 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Socket/Adapter/Swoole.php',
+      'line' => 134,
+      'function' => 'start',
+      'args' => 
+      array (
+      ),
+      'class' => 'swoole_http_server',
+      'type' => '->',
+    ),
+    10 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/Server/Adapter/Socket.php',
+      'line' => 31,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Socket\\Adapter\\Swoole',
+      'type' => '->',
+    ),
+    11 => 
+    array (
+      'file' => '/root/apps_test/90server_test/ZPHP/ZPHP.php',
+      'line' => 189,
+      'function' => 'run',
+      'args' => 
+      array (
+      ),
+      'class' => 'ZPHP\\Server\\Adapter\\Socket',
+      'type' => '->',
+    ),
+    12 => 
+    array (
+      'file' => '/root/apps_test/90server_test/Application/webroot/main.php',
+      'line' => 7,
+      'function' => 'run',
+      'args' => 
+      array (
+        0 => '\'/root/apps_test/90server_test/Application\'',
+      ),
+      'class' => 'ZPHP\\ZPHP',
+      'type' => '::',
+    ),
+  ),
+)
