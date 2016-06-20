@@ -4,7 +4,23 @@
 	<title>九零｜找到我们</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	<script>
+		if (location.hash === '#fromios') {
+			location.href = 'https://appsto.re/cn/HbMMcb.i';
+		}
+		// qrcode
+		if (location.search === '?client') {
+		    var ua = navigator.userAgent;
+		    var is_weixin = /\bMicroMessenger\b/i.test(ua);
+		    var is_ios = /\b(iphone|ipad|mac)\b/i.test(ua);
 
+		    if (is_ios) {
+		        !is_weixin && (location.href = 'https://appsto.re/cn/HbMMcb.i');
+		    } else {
+		        location.href = 'http://sj.qq.com/myapp/detail.htm?apkName=com.looa.ninety';
+		    }
+		}
+	</script>
 
 	<!-- Included Google Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300,100' rel='stylesheet' type='text/css'>
@@ -30,6 +46,24 @@
 	<style>
 		.cta_button_area {
 			display: block;
+			cursor: pointer;
+		}
+		.mask {
+			display: none;
+			position: fixed;
+			z-index: 99999;
+			left: 0;
+			top: 0;
+			width: 100%;
+			min-height: 100%;
+			background: rgb(0, 0, 0) url("images/safari.png") 90% 10% / 170px 60px no-repeat;
+		}
+		@media (min-width: 1200px) {
+			.cta_button_area {
+				display: inline;
+				margin-right: 22px;
+				margin-left: 22px;
+			}
 		}
 	</style>
     <!-- Main CSS file -->
@@ -102,10 +136,11 @@
 						<h2 class="slogan"><img class="img_responsive" src="images/custom/logo-big.gif" alt=""></h2>
 
 						<!-- CTA Buttons-->
-						<a class="cta_button_area" href="https://appsto.re/cn/HbMMcb.i">
-							<!-- <a href="https://appsto.re/cn/HbMMcb.i"> -->
-								<img class="img_responsive" src="images/custom/btn-status.jpg" alt="">
-							<!-- </a> -->
+						<a class="cta_button_area ios" href="javascript:;" data-url="https://appsto.re/cn/HbMMcb.i">
+							<img class="img_responsive" src="images/custom/btn-dwn-ios.jpg" alt="">
+						</a>
+						<a class="cta_button_area" href="javascript:;" data-url="http://sj.qq.com/myapp/detail.htm?apkName=com.looa.ninety">
+							<img class="img_responsive" src="images/custom/btn-dwn-android.jpg" alt="">
 						</a>
 						<!-- //CTA Buttons-->
 
@@ -124,13 +159,13 @@
 
 
 			<!-- Video Background -->
-			<div id="maximage_video">
+			<!-- <div id="maximage_video">
 				<video autoplay="autoplay" loop="loop" muted="muted">
-				    <source src="" type="video/mp4" />
-				    <source src="" type="video/webm" />
-				    <source src="" type="video/ogg" />
+				    <source src="http://7xryb0.com1.z0.glb.clouddn.com/official_website_video_bg.mp4" type="video/mp4" />
+				    <source src="http://7xryb0.com1.z0.glb.clouddn.com/official_website_video_bg.webm" type="video/webm" />
+				    <source src="http://7xryb0.com1.z0.glb.clouddn.com/official_website_video_bg.ogv" type="video/ogg" />
 				</video>
-			</div>
+			</div> -->
 			<!-- //Video Background -->
 
 
@@ -362,6 +397,7 @@
 
 
 	</div><!-- //preloader -->
+	<div class="mask"> </div>
 
 
 	<!-- JavaScript plugins comes here -->
@@ -460,6 +496,24 @@
 			}
 		 } );
 	} );
+	</script>
+	<!-- handle download -->
+	<script>
+	;$(function(){
+		var ua = navigator.userAgent;
+		var is_weixin = /\bMicroMessenger\b/i.test(ua);
+		var is_ios = /\b(iphone|ipad|mac)\b/i.test(ua);
+
+		$('.cta_button_area').on('click', function(e){
+			if (is_weixin && is_ios && $(this).hasClass('ios')) {
+				location.hash = 'fromios';
+				$('.mask').css({display: 'block'});
+			} else {
+				location.href = $(this).data('url');
+			}
+
+		});
+	});
 	</script>
 
   </body>

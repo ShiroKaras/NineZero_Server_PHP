@@ -1,264 +1,3 @@
-./restart.sh -r
-git pull origin master
-./restart.sh -r
-git pull origin master
-./restart.sh -r
-git pull origin master
-./restart.sh -r
-vim socket/20160423/debug.log 
-./restart.sh -r
-git pull origin master
-./restart.sh -r
-git pull origin master
-./restart.sh -r
-git pull origin master
-./restart.sh -r
-exit
-cd apps/90server/
-git pull origin master
-./restart.sh -r
-exit
-cd apps/90web/
-git pull
-cd apps/90server/
-git pull origin master
-./restart.sh -r
-exit
-cd apps/90web/
-vim Application/Home/Controller/QuestionController.class.php 
-cd apps/90web/
-git pull
-ls
-cd apps/
-ls
-cd 90server/
-ls
-cd Application/
-ls
-cd apps/
-ls
-tree
-brew 
-cd
-ls
-cat test.txt 
-cd 
-ls
-cd apps/
-ls
-cd 90web/
-ls
-cd Public/
-ls
-cd apps/90server/
-git pull origin master
-./restart.sh -r
-git pull origin master
-./restart.sh -r
-ls
-cd ../90web/
-ls
-git fetch -all
-git fetch --all
-git branch -l
-git pull origin master
-cd apps/90web/
-git pull origin master
-exit
-cd apps/90web/
-git pull origin master
-cd ../90server/
-git pull origin master
-./restart.sh -r
-cd ../90web/
-git pull origin master
-ls
-cd bin
-cd apps/90web/
-git pull
-git branch
-git checkout maseter
-git status
-git checkout master
-git pull
-ls
-cd apps/
-ls
-cd 90web/
-ls
-git -v
-git remote -v
-git pull
-freeyiyi
-git pull
-cd apps/90web/
-git fetch origin -all
-git fetch origin --all
-git fetch --all origin
-git fetch --all
-git checkout old_1
-git fetch --all
-git checkout old_2
-cd apps/90web/
-git pull
-ls
-vim /etc/nginx/
-cd /etc/nginx/
-ls
-cd sites-enabled/
-ls
-vim 90web 
-cd apps/90web/
-git pull
-cd apps/90web/
-git pull
-cd Application/
-ls
-cd Home/
-cd View/
-ls
-cd U
-cd User/
-ls
-mv cityquery.html cityQuery.html
-cd apps/90web/
-git pull
-ls
-mv 90.apk apps/90web/Public/
-cd apps/90web/Public/
-ls
-cd ../
-mkdir Download
-sudo chmod a+r Download/
-sudo chmod a+r -r Download/
-sudo chmod a+r -R Download/
-sudo mv Public/90.apk Download/
-sudo chmod a+r -R Download/
-cd ../
-ls
-cd 90server/
-git pull origin master
-./restart.sh -r
-exit
-ls
-cd apps/90web/
-git status
-cd apps/90web/
-git pull
-cd apps/90web/
-git pull
-cd apps/90server/
-git pull origin master
-./restart.sh -r
-git git pull
-git pull
-cd apps/90web/
-ls
-git pugit pull
-git pull
-cd apps/90server/
-ls
-cd socket/
-kls
-ls
-vim 20160426/debug.log 
-cd ../
-cd Application/apps/ctrl/
-ls
-vim Login.php 
-vim ../
-cd ../
-ls
-vim dao/user/User.php 
-vim common/Common.php 
-vim dao/user/User.php 
-exit
-cd apps/90server/
-ls
-vim Application/apps/dao/user/User.php 
-./restart.sh -r
-vim Application/apps/dao/user/User.php 
-./restart.sh
-vim Application/apps/ctrl/Login.php 
-./restart.sh -r
-vim Application/apps/ctrl/Login.php 
-vim Application/apps/dao/user/User.php 
-./restart.sh -r
-exit
-cd apps/90server/
-ls
-./restart.sh -r
-exit
-ls
-cd apps/90server/
-ls
-vim Application/apps/dao/user/Info.php 
-vim Application/apps/ctrl/Login.php 
-./restart.sh -r
-vim Application/apps/ctrl/Login.php 
-./restart.sh -r
-vim Application/apps/dao/user/User.php 
-vim Application/apps/ctrl/Login.php 
-./restart.sh -r
-exit
-cd apps/90server/
-ls
-exit
-cd apps/90web/
-git pull
-cd apps/90web/
-git pull
-cd apps/90web/
-git pull
-cd apps/90web/
-git pull
-cd apps/90web/
-git pull
-cd apps/90web/
-git pull
-cd apps/90_s
-cd apps/90server/
-git pull origin master
-git diff Application/apps/dao/user/User.php
-git fetch --all
-git reset --hard origin/master
-./restart.sh -r
-git pull origin master
-./restart.sh -r
-exit
-cd apps/90web/
-git pull
-cd apps/90server/
-ls
-cd socket/
-cd 20160427/
-vim debug.log
-cd apps/90web/
-git pull
-cd apps/90server/
-ls
-./restart.sh -r
-cd tests/
-ls
-vim Question.php 
-php Question.php 1 4
-vim Question.php 
-php Question.php 1 4
-exit
-cd apps/90server/
-ls
-vim Application/apps/ctrl/Question.php 
-exit
-cd apps/90server/
-ls
-git pull origin master
-./restart.sh -r
-exit
-cd apps/90web/
-git pull
-git log
-git pull
-cd apps/90server/
 ls
 git pull origin master
 ./restart.sh 
@@ -1998,3 +1737,264 @@ cd 90web/
 git pull
 cd ..
 ls
+cd apps_test/
+ls
+cd 90web_test/
+ls
+git pull origin test 
+git pull test
+git pull origin test
+ls
+cd ../..
+ls
+cd apps
+ls
+cd 90web/
+ls
+git log
+git remote -v
+git push coding master 
+ls
+git pull coding master 
+redis-server
+sudo chkconfig redis on
+service redis start
+redis-server -h
+redis-server --daemonize yes
+redis-cli 
+ls
+cd apps
+ls
+cd 90server/
+ls
+git log
+redis-server --port 6380 --daemonize yes
+cd apps_test/
+cd 90web_test/
+ls
+git log
+git branch
+cd ..
+ls
+cd 90server_test/
+
+git branch test
+git branch 
+git log
+gita
+git remote -v
+git pull origin test 
+lsof -Pnl +M -i4 | grep  5290
+kill -9 5683
+./start.sh -r
+redis-cli -p 6380
+redis-cli
+redis-cli --port 6380
+redis-cli -p 6380
+redis-cli
+cd ..
+ls
+cd -
+cd apps_test/
+ls
+90server_test/
+cd 90server_test/
+ls
+cd scripts/
+ls
+php crontab_refresh_question.php
+ls
+cd apps_test/
+ls
+cd 90web_test/
+ls
+gita
+ls
+git pull origin test 
+ls
+cd ..
+ls
+cd ..
+ls
+cd apps
+ls
+cd 90web/
+ls
+git branch
+git remote -v
+git pull coding master 
+ls
+cd ..
+ls
+cd ../apps_test/
+ls
+cd 90server_test/
+ls
+cd scripts/
+ls
+php crontab_refresh_question.php
+ls
+cd app_test
+cd apps_test
+ls
+cd 90server_test/
+ls
+cd scripts/
+ls
+redis-cli -p 6380
+redis-cli -p 6379
+ls
+cd apps_test/
+cd 90web_test/
+ls
+git branch 
+git pull origin test 
+cd ..
+ls
+cd 90server_test/
+ls
+cd scripts/
+ls
+php crontab_refresh_question.php
+ls
+cd ../../
+ls
+cd 90web_test/
+ls
+git branch 
+git pull origin test 
+cd ../90server_test/
+git pull origin test 
+lsof -Pnl +M -i4 | grep  5290
+kill -9 25004
+./start.sh 
+ls
+git pull origin test 
+./start.sh 
+git pull origin test 
+./start.sh 
+git pull origin test 
+./start.sh 
+ls
+cd apps_test/
+ls
+cd 90server_test/
+lsof -Pnl +M -i4 | grep  5290
+./start.sh 
+git pull origin test 
+./start.sh 
+git pull origin test 
+./start.sh 
+git pull origin test 
+./start.sh 
+git pull origin test 
+./start.sh 
+git pull origin test 
+./start.sh 
+ls
+cd apps
+ls
+cd 90web/
+ls
+cd ../../
+ls
+cd apps_test/
+ls
+cd 90server_test/
+ls
+cd scripts/
+ls
+php crontab_refresh_rank.php
+cd apps_test/90server_test/
+cd scripts/
+ls
+php crontab_refresh_question.php
+cd ~
+ls
+redis-cli 
+ls
+redis-cli 
+ls
+cd apps
+ls
+cd 90server/
+ls
+git branch 
+git remote -v
+ls
+git pull coding master 
+git status 
+git log
+git diff Application/apps/common/PushClient.php
+git status
+git diff Application/apps/ctrl/Answer.php
+git diff Application/apps/common/PushClient.php
+git diff Application/apps/ctrl/Article.php
+git diff Application/apps/ctrl/Push.php
+git log
+gita
+git status 
+git diff Application/apps/task/Adapter/Reward.php
+ls
+cd 90s_te
+cd apps_test/
+ls
+cd 90web_test/
+ls
+git log
+git pull origin test 
+ls
+cd ../90server_test/
+./start.sh -r
+ls
+cd apps/90server/
+ls
+git log
+git status
+git log
+git status
+gita
+git diff Application/apps/redis/adapter/Ticket.php
+cat ./Application/apps/redis/adapter/Ticket.php | less
+git status
+git diff ./Application/apps/redis/adapter/Ticket.php | less
+git log
+cat ./Application/apps/ctrl/Ticket.php|less
+git branch list
+git branch
+git branch -d list
+git branch
+git status
+git diff Application/apps/task/Adapter/Reward.php
+git add -A
+git commit 
+gco .
+git checkout .
+gita
+git log
+git pull coding master 
+git status
+git reset .
+ls
+cd apps
+ls
+cd 90server/
+ls
+git status 
+git checkout .
+git status
+cat jpush.log
+ls
+git status
+cat scripts/log.txt
+ls
+gita
+git status
+rm jpush.log
+rm scripts/.log.txt.swp
+rm scripts/log.txt
+git status
+git pull coding master 
+cat Application/apps/common/YXSMS.php
+git pull coding master 
+git log

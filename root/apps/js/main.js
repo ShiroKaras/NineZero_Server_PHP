@@ -1,33 +1,33 @@
 (function($) {
     // 视频适配
-        var screenEvt = 'onorientationchange' in window ? 'orientationchange' : 'resize';
-        var $video = $('#maximage_video video');
-        var rateV = $video.width() / $video.height();
-        var adaptVideo = function () {
-                var rateC = window.innerWidth / window.innerHeight;
-                if (rateC > rateV) {
-                    $video.css({
-                        width: window.innerWidth + 'px',
-                        // height: window.innerWidth / rateV + 'px',
-                        'top': -(window.innerWidth / rateV - window.innerHeight) / 2 + 'px',
-                        left: 0
-                    })
-                } else {
-                    $video.css({
-                        width: window.innerHeight * rateV + 'px',
-                        // height: window.innerHeight + 'px',
-                        top: 0,
-                        'left': -(window.innerHeight * rateV - window.innerWidth) / 2 + 'px'
-                    })
-                }
-            };
+        // var screenEvt = 'onorientationchange' in window ? 'orientationchange' : 'resize';
+        // var $video = $('#maximage_video video');
+        // var rateV = $video.width() / $video.height();
+        // var adaptVideo = function () {
+        //         var rateC = window.innerWidth / window.innerHeight;
+        //         if (rateC > rateV) {
+        //             $video.css({
+        //                 width: window.innerWidth + 'px',
+        //                 // height: window.innerWidth / rateV + 'px',
+        //                 'top': -(window.innerWidth / rateV - window.innerHeight) / 2 + 'px',
+        //                 left: 0
+        //             })
+        //         } else {
+        //             $video.css({
+        //                 width: window.innerHeight * rateV + 'px',
+        //                 // height: window.innerHeight + 'px',
+        //                 top: 0,
+        //                 'left': -(window.innerHeight * rateV - window.innerWidth) / 2 + 'px'
+        //             })
+        //         }
+        //     };
 
-        adaptVideo();
-        $(window).on(screenEvt, adaptVideo);
+        // adaptVideo();
+        // $(window).on(screenEvt, adaptVideo);
 
 var App = { init: function() { App.HomepageHeight();           // helper script to set homepage to full height
                                App.HomepageOpacity();          // changes homepage opacity on scroll
-							   App.MaxImage_Video();           // homepage background - video
+							   // App.MaxImage_Video();           // homepage background - video
 							   App.MaxImage_Slider();          // homepage background - image slider
 							   App.MaxImage_Single();          // homepage background - vingle image
 							   App.ScrollToSomeplace();        // script resposible for smooth scrolling after clicking on menu item
